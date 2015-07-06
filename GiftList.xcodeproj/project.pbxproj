@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510011B3334E80085B2CE /* AppDelegate.swift */; };
 		2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510031B3334E80085B2CE /* GiftList.xcdatamodeld */; };
-		2D4510071B3334E80085B2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510061B3334E80085B2CE /* ViewController.swift */; };
+		2D4510071B3334E80085B2CE /* GiftListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510061B3334E80085B2CE /* GiftListController.swift */; };
 		2D45100A1B3334E80085B2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D4510081B3334E80085B2CE /* Main.storyboard */; };
 		2D45100C1B3334E80085B2CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D45100B1B3334E80085B2CE /* Images.xcassets */; };
 		2D45100F1B3334E80085B2CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D45100D1B3334E80085B2CE /* LaunchScreen.xib */; };
 		2D45101B1B3334E90085B2CE /* GiftListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45101A1B3334E90085B2CE /* GiftListTests.swift */; };
+		2D45102D1B33607F0085B2CE /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102C1B33607F0085B2CE /* DataContext.swift */; };
+		2D45102F1B33653E0085B2CE /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102E1B33653E0085B2CE /* Gift.swift */; };
+		2D4510311B3374800085B2CE /* DSC_0072.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D4510301B3374800085B2CE /* DSC_0072.jpg */; };
+		2D4510331B3377B50085B2CE /* GiftDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510321B3377B50085B2CE /* GiftDetailController.swift */; };
+		2D5589F91B3771A900915E1D /* ImageZoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5589F81B3771A900915E1D /* ImageZoomController.swift */; };
+		2D8334441B418406007BC016 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8334431B418406007BC016 /* photo.png */; };
+		2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */; };
+		2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +39,21 @@
 		2D4510001B3334E80085B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D4510011B3334E80085B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D4510041B3334E80085B2CE /* GiftList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiftList.xcdatamodel; sourceTree = "<group>"; };
-		2D4510061B3334E80085B2CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D4510061B3334E80085B2CE /* GiftListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListController.swift; sourceTree = "<group>"; };
 		2D4510091B3334E80085B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D45100B1B3334E80085B2CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2D45100E1B3334E80085B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2D4510141B3334E90085B2CE /* GiftListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiftListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4510191B3334E90085B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D45101A1B3334E90085B2CE /* GiftListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListTests.swift; sourceTree = "<group>"; };
+		2D45102C1B33607F0085B2CE /* DataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
+		2D45102E1B33653E0085B2CE /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		2D4510301B3374800085B2CE /* DSC_0072.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0072.jpg; sourceTree = "<group>"; };
+		2D4510321B3377B50085B2CE /* GiftDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDetailController.swift; sourceTree = "<group>"; };
+		2D5589F81B3771A900915E1D /* ImageZoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomController.swift; sourceTree = "<group>"; };
+		2D8334431B418406007BC016 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGiftController.swift; sourceTree = "<group>"; };
+		2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +95,21 @@
 		2D450FFE1B3334E80085B2CE /* GiftList */ = {
 			isa = PBXGroup;
 			children = (
+				2D8334431B418406007BC016 /* photo.png */,
+				2D4510301B3374800085B2CE /* DSC_0072.jpg */,
+				2D45102E1B33653E0085B2CE /* Gift.swift */,
 				2D4510011B3334E80085B2CE /* AppDelegate.swift */,
-				2D4510061B3334E80085B2CE /* ViewController.swift */,
+				2D4510061B3334E80085B2CE /* GiftListController.swift */,
+				2D4510321B3377B50085B2CE /* GiftDetailController.swift */,
+				2D5589F81B3771A900915E1D /* ImageZoomController.swift */,
+				2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */,
+				2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */,
 				2D4510081B3334E80085B2CE /* Main.storyboard */,
 				2D45100B1B3334E80085B2CE /* Images.xcassets */,
 				2D45100D1B3334E80085B2CE /* LaunchScreen.xib */,
 				2D4510031B3334E80085B2CE /* GiftList.xcdatamodeld */,
 				2D450FFF1B3334E80085B2CE /* Supporting Files */,
+				2D45102C1B33607F0085B2CE /* DataContext.swift */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -196,6 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D45100A1B3334E80085B2CE /* Main.storyboard in Resources */,
+				2D4510311B3374800085B2CE /* DSC_0072.jpg in Resources */,
+				2D8334441B418406007BC016 /* photo.png in Resources */,
 				2D45100F1B3334E80085B2CE /* LaunchScreen.xib in Resources */,
 				2D45100C1B3334E80085B2CE /* Images.xcassets in Resources */,
 			);
@@ -215,8 +241,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D4510071B3334E80085B2CE /* ViewController.swift in Sources */,
+				2D4510331B3377B50085B2CE /* GiftDetailController.swift in Sources */,
+				2D45102D1B33607F0085B2CE /* DataContext.swift in Sources */,
+				2D45102F1B33653E0085B2CE /* Gift.swift in Sources */,
+				2D4510071B3334E80085B2CE /* GiftListController.swift in Sources */,
+				2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */,
+				2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */,
 				2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */,
+				2D5589F91B3771A900915E1D /* ImageZoomController.swift in Sources */,
 				2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +447,7 @@
 				2D4510201B3334E90085B2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D4510211B3334E90085B2CE /* Build configuration list for PBXNativeTarget "GiftListTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +456,7 @@
 				2D4510231B3334E90085B2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
