@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3200C41B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */; };
 		2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510011B3334E80085B2CE /* AppDelegate.swift */; };
 		2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510031B3334E80085B2CE /* GiftList.xcdatamodeld */; };
 		2D4510071B3334E80085B2CE /* GiftListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510061B3334E80085B2CE /* GiftListController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_blue_mini_dots_on_sky_blue.jpg; sourceTree = "<group>"; };
 		2D450FFC1B3334E80085B2CE /* GiftList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4510001B3334E80085B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D4510011B3334E80085B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		2D450FFE1B3334E80085B2CE /* GiftList */ = {
 			isa = PBXGroup;
 			children = (
+				2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */,
 				2D8334431B418406007BC016 /* photo.png */,
 				2D4510301B3374800085B2CE /* DSC_0072.jpg */,
 				2D45102E1B33653E0085B2CE /* Gift.swift */,
@@ -219,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3200C41B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg in Resources */,
 				2D45100A1B3334E80085B2CE /* Main.storyboard in Resources */,
 				2D4510311B3374800085B2CE /* DSC_0072.jpg in Resources */,
 				2D8334441B418406007BC016 /* photo.png in Resources */,
