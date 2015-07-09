@@ -228,8 +228,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Sohal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-Qo-LmQ">
-                                <rect key="frame" x="30" y="89" width="121.5" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Sohal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-Qo-LmQ">
+                                <rect key="frame" x="10" y="89" width="580" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="X2T-Wo-1Iq"/>
                                 </constraints>
@@ -238,22 +238,43 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="May 2nd, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-fU-AXg">
-                                <rect key="frame" x="30" y="126" width="162" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 2nd, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-fU-AXg">
+                                <rect key="frame" x="10" y="132" width="580" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="5TT-ys-mx2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5TT-ys-mx2"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ibL-9B-DBJ" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" id="0e0-1a-fnc"/>
                             <constraint firstItem="2iA-Vq-fBY" firstAttribute="top" secondItem="ibL-9B-DBJ" secondAttribute="bottom" id="8bb-T0-KuH"/>
+                            <constraint firstItem="2iA-Vq-fBY" firstAttribute="top" secondItem="J1K-fU-AXg" secondAttribute="bottom" constant="447" id="Hfn-BF-tyi"/>
                             <constraint firstAttribute="trailing" secondItem="ibL-9B-DBJ" secondAttribute="trailing" id="ImN-Im-ENc"/>
                             <constraint firstItem="ibL-9B-DBJ" firstAttribute="top" secondItem="nhE-e6-RAC" secondAttribute="top" id="eHn-d1-vp8"/>
+                            <constraint firstItem="J1K-fU-AXg" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" constant="243" id="gxC-id-XNf"/>
+                            <constraint firstItem="u7k-Qo-LmQ" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" constant="10" id="oTA-X0-BWV"/>
+                            <constraint firstAttribute="trailing" secondItem="u7k-Qo-LmQ" secondAttribute="trailing" constant="10" id="p2G-VP-kio"/>
                             <constraint firstItem="u7k-Qo-LmQ" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" constant="30" id="qXN-A4-4lo"/>
                             <constraint firstItem="u7k-Qo-LmQ" firstAttribute="top" secondItem="nCZ-82-1ba" secondAttribute="bottom" constant="25" id="qha-vg-pW4"/>
+                            <constraint firstAttribute="trailing" secondItem="J1K-fU-AXg" secondAttribute="trailing" constant="10" id="vdC-Fv-d1q"/>
+                            <constraint firstItem="J1K-fU-AXg" firstAttribute="top" secondItem="u7k-Qo-LmQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yG2-r4-TTF"/>
+                            <constraint firstItem="J1K-fU-AXg" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" constant="10" id="yOg-Yp-Eci"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gxC-id-XNf"/>
+                                <exclude reference="Hfn-BF-tyi"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="J1K-fU-AXg" id="D7f-TN-bhP"/>
@@ -264,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtW-2k-tX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="1157"/>
+            <point key="canvasLocation" x="1813" y="1209"/>
         </scene>
         <!--Gift Detail View Controller-->
         <scene sceneID="CFV-zj-bcF">
