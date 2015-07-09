@@ -16,7 +16,7 @@ class DataContext {
     
     var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
 
-    
+    //Insert
     func InsertGift(name: String, uiImageName: String)
     {
         
@@ -32,6 +32,7 @@ class DataContext {
         
     }
     
+    //Insert with Front and Back Image
     func InsertGiftWithFrontandBackImage(name: String, frontImage: NSData, backImage: NSData)
     {
         var newGift = NSEntityDescription.insertNewObjectForEntityForName("Gift", inManagedObjectContext: context) as! Gift
@@ -46,6 +47,13 @@ class DataContext {
         
         self.context.save(nil)
         
+    }
+    
+    func DeleteGift(gift: Gift)
+    {
+        
+        self.context.deleteObject(gift)
+        self.context.save(nil)
     }
     
     func GetAllGifts() -> [Gift]
@@ -65,17 +73,5 @@ class DataContext {
     }
     
     
-//    func InsertEvent(event:Event)
-//    {
-//        var newEvent = NSEntityDescription.insertNewObjectForEntityForName(self.EventEntity, inManagedObjectContext: self.context!) as! Event;
-//        
-//        //Map incoming gift to new gift
-//        
-//        newEvent.name = event.name
-//
-//        
-//        context!.save(nil)
-//        
-//        
-//    }
+
 }

@@ -28,6 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         
+        
+        //Add background to table view
+        self.tableView.rowHeight = 200
+        
+        //self.tableView.backgroundView = UIImageView(image: UIImage(named: "light_blue_mini_dots_on_sky_blue"))
+        
+        
         self.loadGifts()
     }
     
@@ -64,6 +71,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel!.text = gift.name
         cell.imageView?.image = UIImage(data: gift.frontImage)
         
+        cell.imageView?.transform = CGAffineTransformMakeScale(0.65, 0.65);
+        
         return cell;
     }
     
@@ -76,17 +85,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
+    //Edit Row
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            var gift = self.gifts[indexPath.row]
+            self.gifts.removeAtIndex(indexPath.row)
+            
+            //Delete the image
+            self.dataContext.DeleteGift(gift)
+            
+            //Delete the row in the table view
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     //Segue pass gift object
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == self.giftDetailSegueName
-        {
-        
-            var detailGiftController = segue.destinationViewController as! GiftDetailViewController
-        
-            detailGiftController.gift = self.selectedGift
-            
-        }
         
         if( segue.identifier == "imageDetailSegue")
         {
