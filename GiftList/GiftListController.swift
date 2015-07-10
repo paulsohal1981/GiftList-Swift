@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var dataContext = DataContext()
     
     let giftDetailSegueName = "giftDetailSegue"
+    let dayTimePeriodFormatter = NSDateFormatter()
 
     
     override func viewDidLoad() {
@@ -31,9 +32,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //Add background to table view
         self.tableView.rowHeight = 200
+        self.tableView.contentInset = UIEdgeInsetsZero
         
-        //self.tableView.backgroundView = UIImageView(image: UIImage(named: "light_blue_mini_dots_on_sky_blue"))
+        //Register the custom cell
+        var nib = UINib(nibName: "GiftTableCellView", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
+        //initialize formatter
+        dayTimePeriodFormatter.dateFormat = "MMMM d, y"
         
         self.loadGifts()
     }
@@ -62,16 +68,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return self.gifts.count;
     }
     
+    //Set Cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        
         var gift = self.gifts[indexPath.row] as Gift
         
-        var cell = UITableViewCell();
+        var cell:GiftCustomCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! GiftCustomCell
         
-        cell.textLabel!.text = gift.name
-        cell.imageView?.image = UIImage(data: gift.frontImage)
+        cell.giftImage?.image = UIImage(data: gift.frontImage)
+        cell.name!.text = gift.name
+        cell.date!.text = dayTimePeriodFormatter.stringFromDate(gift.createdDate)
         
-        cell.imageView?.transform = CGAffineTransformMakeScale(0.65, 0.65);
         
         return cell;
     }
