@@ -26,5 +26,23 @@ class GiftCustomCell : UITableViewCell {
     }
     
     
+    @IBAction func thankSelected(sender: AnyObject) {
+        let textToShare = "Thank you for the gift!"
+        
+        //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
+        if let myImage = self.giftImage.image
+        {
+            let objectsToShare = [textToShare, myImage]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            
+            
+            //self.presentViewController(activityVC, animated: true, completion: nil)
+            
+            UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
     
 }

@@ -31,11 +31,21 @@
                             <constraint firstAttribute="width" constant="149" id="wai-bF-wci"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTW-ee-NRw">
+                        <rect key="frame" x="165" y="168.5" width="46" height="30"/>
+                        <state key="normal" title="Thank!">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="thankSelected:" destination="U7e-TN-DjR" eventType="touchUpInside" id="yyQ-U0-f8Q"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5vE-ay-eLB" firstAttribute="top" secondItem="lQl-Fb-wwH" secondAttribute="bottom" constant="5.5" id="3ll-Cd-DSB"/>
                     <constraint firstAttribute="trailing" secondItem="lQl-Fb-wwH" secondAttribute="trailing" id="4l8-HW-U1a"/>
                     <constraint firstItem="Oj7-Rw-aoY" firstAttribute="leading" secondItem="110-dp-y5q" secondAttribute="leading" constant="2" id="EMJ-El-YI1"/>
+                    <constraint firstItem="oTW-ee-NRw" firstAttribute="leading" secondItem="Oj7-Rw-aoY" secondAttribute="trailing" constant="14" id="H9a-C6-CKO"/>
                     <constraint firstItem="lQl-Fb-wwH" firstAttribute="leading" secondItem="Oj7-Rw-aoY" secondAttribute="trailing" constant="14" id="Jk9-B4-9tC"/>
                     <constraint firstAttribute="trailing" secondItem="5vE-ay-eLB" secondAttribute="trailing" id="MHk-AK-mHX"/>
                     <constraint firstItem="5vE-ay-eLB" firstAttribute="leading" secondItem="110-dp-y5q" secondAttribute="leading" constant="8" id="Qpt-Ik-QnK"/>
@@ -44,6 +54,7 @@
                     <constraint firstItem="lQl-Fb-wwH" firstAttribute="leading" secondItem="110-dp-y5q" secondAttribute="leading" id="bhe-S8-Isw"/>
                     <constraint firstAttribute="trailing" secondItem="lQl-Fb-wwH" secondAttribute="trailing" constant="5" id="fkI-jz-9QV"/>
                     <constraint firstAttribute="trailing" secondItem="5vE-ay-eLB" secondAttribute="trailing" id="miv-Zi-uVP"/>
+                    <constraint firstAttribute="bottom" secondItem="oTW-ee-NRw" secondAttribute="bottom" constant="5" id="oyb-hI-j28"/>
                     <constraint firstItem="Oj7-Rw-aoY" firstAttribute="top" secondItem="110-dp-y5q" secondAttribute="top" constant="2" id="qWh-K0-KHC"/>
                     <constraint firstItem="5vE-ay-eLB" firstAttribute="top" secondItem="lQl-Fb-wwH" secondAttribute="bottom" constant="8" id="qnX-dt-Ub8"/>
                     <constraint firstItem="5vE-ay-eLB" firstAttribute="leading" secondItem="Oj7-Rw-aoY" secondAttribute="trailing" constant="14" id="t2R-E1-TFx"/>
