@@ -13,7 +13,9 @@ class ImageDetailController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    
     let dayTimePeriodFormatter = NSDateFormatter()
+    let dataContext = DataContext()
 
     
     var gift : Gift? = nil
@@ -39,6 +41,36 @@ class ImageDetailController: UIViewController {
         //Add tap even to front image view
         self.detailImage.addGestureRecognizer(frontTapRecoginzer)
         
+    }
+    
+    @IBAction func deleteGift(sender: AnyObject) {
+        //Delete the image
+        self.dataContext.DeleteGift(gift!)
+        
+        //Pop this view
+        navigationController?.popViewControllerAnimated(true)
+        
+    }
+    
+    @IBAction func shareButtonClicked(sender: AnyObject) {
+        let textToShare = "Thank you for the gift!"
+        
+        //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
+            if let myImage = UIImage(data: self.gift!.frontImage)
+        {
+            let objectsToShare = [textToShare, myImage]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            //
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+            
+            
+            //Pop this view
+            navigationController?.popViewControllerAnimated(true)
+        }
     }
     
     func frontTapped()

@@ -267,8 +267,16 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHW-Fv-oyl">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="action" id="pg5-6t-bF7"/>
-                                    <barButtonItem systemItem="trash" id="ft1-7v-q3j"/>
+                                    <barButtonItem systemItem="action" id="pg5-6t-bF7">
+                                        <connections>
+                                            <action selector="shareButtonClicked:" destination="rpv-b3-dYt" id="fsf-2X-Fkj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="trash" id="ft1-7v-q3j">
+                                        <connections>
+                                            <action selector="deleteGift:" destination="rpv-b3-dYt" id="E6x-y7-o4a"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
