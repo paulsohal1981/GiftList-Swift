@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+    
+    func applicationDidFinishLaunching(application: UIApplication) {
+        
+        Parse.setApplicationId("VM79wzdmd2SWVxC2AKK1YUyIHClhw1JUjeZZokhM", clientKey: "BXITxYXJw46jgVIZEIDdFEdcQdjvqlCZ7T0prInk")
+        
+        //Track Analytics
+//        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(<#launchOptions: [NSObject : AnyObject]?#>, block: <#PFBooleanResultBlock?##(Bool, NSError?) -> Void#>)
+
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
