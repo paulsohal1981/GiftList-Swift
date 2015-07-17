@@ -77,7 +77,7 @@ class ImageDetailController: UIViewController {
     {
         
         //Initiate Segue
-        self.performSegueWithIdentifier("zoomDetailSegue", sender: self)
+        //self.performSegueWithIdentifier("zoomDetailSegue", sender: self)
         
     }
     

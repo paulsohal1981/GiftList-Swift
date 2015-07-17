@@ -251,7 +251,7 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 2nd, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-fU-AXg">
-                                <rect key="frame" x="10" y="132" width="580" height="21"/>
+                                <rect key="frame" x="10" y="132" width="580" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="5TT-ys-mx2"/>
                                 </constraints>
@@ -264,14 +264,16 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHW-Fv-oyl">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHW-Fv-oyl">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mmw-kM-2zA"/>
                                     <barButtonItem systemItem="action" id="pg5-6t-bF7">
                                         <connections>
                                             <action selector="shareButtonClicked:" destination="rpv-b3-dYt" id="fsf-2X-Fkj"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VI1-lx-c2X"/>
                                     <barButtonItem systemItem="trash" id="ft1-7v-q3j">
                                         <connections>
                                             <action selector="deleteGift:" destination="rpv-b3-dYt" id="E6x-y7-o4a"/>
@@ -286,6 +288,9 @@
                             <constraint firstItem="2iA-Vq-fBY" firstAttribute="top" secondItem="ibL-9B-DBJ" secondAttribute="bottom" id="8bb-T0-KuH"/>
                             <constraint firstItem="2iA-Vq-fBY" firstAttribute="top" secondItem="J1K-fU-AXg" secondAttribute="bottom" constant="447" id="Hfn-BF-tyi"/>
                             <constraint firstAttribute="trailing" secondItem="ibL-9B-DBJ" secondAttribute="trailing" id="ImN-Im-ENc"/>
+                            <constraint firstItem="2iA-Vq-fBY" firstAttribute="top" secondItem="rHW-Fv-oyl" secondAttribute="bottom" id="K2G-lB-WsH"/>
+                            <constraint firstItem="rHW-Fv-oyl" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" id="Wpe-Fb-gKS"/>
+                            <constraint firstAttribute="trailing" secondItem="rHW-Fv-oyl" secondAttribute="trailing" id="d3f-LV-FoO"/>
                             <constraint firstItem="ibL-9B-DBJ" firstAttribute="top" secondItem="nhE-e6-RAC" secondAttribute="top" id="eHn-d1-vp8"/>
                             <constraint firstItem="J1K-fU-AXg" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" constant="243" id="gxC-id-XNf"/>
                             <constraint firstItem="u7k-Qo-LmQ" firstAttribute="leading" secondItem="nhE-e6-RAC" secondAttribute="leading" constant="10" id="oTA-X0-BWV"/>
