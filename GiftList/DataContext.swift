@@ -49,10 +49,20 @@ class DataContext {
         
     }
     
+    func UpdateGift(gift: Gift)
+    {
+        
+    }
+    
     func DeleteGift(gift: Gift)
     {
         
         self.context.deleteObject(gift)
+        self.context.save(nil)
+    }
+    
+    func Save()
+    {
         self.context.save(nil)
     }
     

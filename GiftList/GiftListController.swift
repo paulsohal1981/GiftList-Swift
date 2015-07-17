@@ -76,6 +76,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cell:GiftCustomCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! GiftCustomCell
         
+        cell.gift = gift
         cell.giftImage?.image = UIImage(data: gift.frontImage)
         cell.name!.text = gift.name
         cell.date!.text = dayTimePeriodFormatter.stringFromDate(gift.createdDate)

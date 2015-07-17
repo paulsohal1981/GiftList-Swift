@@ -5,8 +5,9 @@
         <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="frontImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="test" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Gift" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="Gift" positionX="-45" positionY="0" width="128" height="120"/>
     </elements>
 </model>

@@ -14,9 +14,13 @@ class GiftCustomCell : UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var date: UILabel!
     
+    var dataContext = DataContext()
+    var gift : Gift? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
     
     
     
@@ -45,4 +49,9 @@ class GiftCustomCell : UITableViewCell {
         }
     }
     
+    func CompleteThanks()
+    {
+        gift?.thanked = 1
+        dataContext.Save()
+    }
 }
