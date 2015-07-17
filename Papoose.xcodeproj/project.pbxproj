@@ -278,6 +278,7 @@
 				TargetAttributes = {
 					2D450FFB1B3334E80085B2CE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Q7W3YMKU4N;
 					};
 					2D4510131B3334E90085B2CE = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -285,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D450FF71B3334E80085B2CE /* Build configuration list for PBXProject "GiftList" */;
+			buildConfigurationList = 2D450FF71B3334E80085B2CE /* Build configuration list for PBXProject "Papoose" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -471,6 +472,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -478,6 +481,7 @@
 				INFOPLIST_FILE = GiftList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -485,6 +489,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -492,6 +498,7 @@
 				INFOPLIST_FILE = GiftList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -532,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D450FF71B3334E80085B2CE /* Build configuration list for PBXProject "GiftList" */ = {
+		2D450FF71B3334E80085B2CE /* Build configuration list for PBXProject "Papoose" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D45101C1B3334E90085B2CE /* Debug */,

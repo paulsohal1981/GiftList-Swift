@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GiftList.xcodeproj">
+      location = "self:/Users/paulsohal/GitHub/GiftList Swift/Papoose.xcodeproj">
    </FileRef>
 </Workspace>
