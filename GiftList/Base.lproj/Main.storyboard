@@ -8,11 +8,11 @@
         <!--Navigation Controller-->
         <scene sceneID="Pet-IH-Xto">
             <objects>
-                <navigationController id="mxI-Gg-8Cn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mxI-Gg-8Cn" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eRg-a9-nv6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.60784313729999995" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.97647058819999999" green="0.59999999999999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KSt-0r-xqr">
                         <autoresizingMask key="autoresizingMask"/>
@@ -126,7 +126,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WCE-ZU-nLN"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.60784313729999995" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.97647058819999999" green="0.59999999999999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Add a New Gift" id="1fD-Ri-xXU">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HsA-92-4B7">
