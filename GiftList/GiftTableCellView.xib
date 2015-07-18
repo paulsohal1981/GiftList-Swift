@@ -12,27 +12,27 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7e-TN-DjR" id="110-dp-y5q">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vE-ay-eLB">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vE-ay-eLB">
                         <rect key="frame" x="165" y="41" width="45.5" height="23.5"/>
                         <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQl-Fb-wwH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQl-Fb-wwH">
                         <rect key="frame" x="165" y="15" width="150" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oj7-Rw-aoY" userLabel="image View">
-                        <rect key="frame" x="2" y="2" width="149" height="200"/>
+                        <rect key="frame" x="2" y="2" width="149" height="195"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="200" id="MLZ-GP-OJW"/>
+                            <constraint firstAttribute="height" constant="195" id="MLZ-GP-OJW"/>
                             <constraint firstAttribute="width" constant="149" id="wai-bF-wci"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTW-ee-NRw">
-                        <rect key="frame" x="165" y="168.5" width="117" height="30"/>
+                        <rect key="frame" x="165" y="168" width="117" height="30"/>
                         <state key="normal" title="Thank them">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -40,12 +40,20 @@
                             <action selector="thankSelected:" destination="U7e-TN-DjR" eventType="touchUpInside" id="yyQ-U0-f8Q"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prZ-ta-o6f">
+                        <rect key="frame" x="168" y="173" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-UltraLightItalic" family="Avenir Next" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5vE-ay-eLB" firstAttribute="top" secondItem="lQl-Fb-wwH" secondAttribute="bottom" constant="5.5" id="3ll-Cd-DSB"/>
                     <constraint firstAttribute="trailing" secondItem="lQl-Fb-wwH" secondAttribute="trailing" id="4l8-HW-U1a"/>
                     <constraint firstItem="Oj7-Rw-aoY" firstAttribute="leading" secondItem="110-dp-y5q" secondAttribute="leading" constant="2" id="EMJ-El-YI1"/>
                     <constraint firstItem="oTW-ee-NRw" firstAttribute="leading" secondItem="Oj7-Rw-aoY" secondAttribute="trailing" constant="14" id="H9a-C6-CKO"/>
+                    <constraint firstItem="prZ-ta-o6f" firstAttribute="leading" secondItem="Oj7-Rw-aoY" secondAttribute="trailing" constant="17" id="I93-M9-rIR"/>
+                    <constraint firstAttribute="bottom" secondItem="prZ-ta-o6f" secondAttribute="bottom" constant="10" id="Ige-Zf-Jhc"/>
                     <constraint firstItem="lQl-Fb-wwH" firstAttribute="leading" secondItem="Oj7-Rw-aoY" secondAttribute="trailing" constant="14" id="Jk9-B4-9tC"/>
                     <constraint firstAttribute="trailing" secondItem="5vE-ay-eLB" secondAttribute="trailing" id="MHk-AK-mHX"/>
                     <constraint firstItem="5vE-ay-eLB" firstAttribute="leading" secondItem="110-dp-y5q" secondAttribute="leading" constant="8" id="Qpt-Ik-QnK"/>
@@ -77,6 +85,8 @@
                 <outlet property="date" destination="5vE-ay-eLB" id="r3a-gb-F2Q"/>
                 <outlet property="giftImage" destination="Oj7-Rw-aoY" id="hBi-B7-JPf"/>
                 <outlet property="name" destination="lQl-Fb-wwH" id="Guf-8Z-J6G"/>
+                <outlet property="thankButton" destination="oTW-ee-NRw" id="XVa-nQ-tSh"/>
+                <outlet property="thankedOnLabel" destination="prZ-ta-o6f" id="vnU-16-Zd8"/>
             </connections>
             <point key="canvasLocation" x="648" y="467"/>
         </tableViewCell>

@@ -82,6 +82,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.name!.text = gift.name
         cell.date!.text = dayTimePeriodFormatter.stringFromDate(gift.createdDate)
         
+       // println(gift.thanked)
+        
+        if(gift.thanked == "1")
+        {
+            cell.thankButton.hidden = true
+            cell.thankedOnLabel.hidden = false
+            cell.thankedOnLabel!.text = "Thanked on " + dayTimePeriodFormatter.stringFromDate(gift.thankedDate)
+        }
+        else
+        {
+            cell.thankedOnLabel.hidden = true
+            cell.thankButton.hidden = false
+        }
+        
         
         return cell;
     }

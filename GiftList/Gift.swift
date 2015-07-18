@@ -15,6 +15,7 @@ class Gift: NSManagedObject {
     @NSManaged var frontImage: NSData
     @NSManaged var name: String
     @NSManaged var createdDate: NSDate
-    @NSManaged var thanked: NSNumber
+    @NSManaged var thanked: String
+    @NSManaged var thankedDate: NSDate
 
 }

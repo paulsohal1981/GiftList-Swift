@@ -40,6 +40,7 @@ class DataContext {
         //Map incoming gift to new gift
         
         newGift.name = name
+        newGift.thanked = "0"
         newGift.frontImage = frontImage
         newGift.backImage = backImage
         newGift.createdDate = NSDate()
@@ -49,10 +50,6 @@ class DataContext {
         
     }
     
-    func UpdateGift(gift: Gift)
-    {
-        
-    }
     
     func DeleteGift(gift: Gift)
     {
@@ -61,8 +58,20 @@ class DataContext {
         self.context.save(nil)
     }
     
-    func Save()
+    func SetThanked(gift: Gift)
     {
+        println(gift.objectID)
+        //Request Entity
+        var request = NSFetchRequest(entityName: self.GiftEntity)
+        let predicate = NSPredicate(format: "createdDate == %@", gift.createdDate)
+        
+        request.predicate = predicate
+        
+        let fetchedEntities = self.context.executeFetchRequest(request, error: nil) as! [Gift]
+        
+        fetchedEntities.first?.thanked = gift.thanked
+        fetchedEntities.first?.thankedDate = gift.thankedDate
+     
         self.context.save(nil)
     }
     
@@ -84,6 +93,19 @@ class DataContext {
         }
         
         return gifts;
+    }
+    
+    func GetGiftByObjectId(objectId: NSManagedObjectID) -> Gift
+    {
+        //Request Entity
+        var request = NSFetchRequest(entityName: self.GiftEntity)
+        let predicate = NSPredicate(format: "objectID == %@", objectId)
+        
+        request.predicate = predicate
+        
+        let fetchedEntities = self.context.executeFetchRequest(request, error: nil) as! [Gift]
+        
+        return fetchedEntities.first!
     }
     
     

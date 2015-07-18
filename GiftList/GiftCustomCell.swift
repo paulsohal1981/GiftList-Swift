@@ -13,16 +13,16 @@ class GiftCustomCell : UITableViewCell {
     @IBOutlet weak var giftImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var thankButton: UIButton!
+    @IBOutlet weak var thankedOnLabel: UILabel!
     
     var dataContext = DataContext()
+    let dayTimePeriodFormatter = NSDateFormatter()
     var gift : Gift? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    
-    
     
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -45,13 +45,22 @@ class GiftCustomCell : UITableViewCell {
             
             //self.presentViewController(activityVC, animated: true, completion: nil)
             
-            UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(activityVC, animated: true, completion: nil)
+            UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(activityVC, animated: true, completion: CompleteThanks)
         }
     }
     
     func CompleteThanks()
     {
-        gift?.thanked = 1
-        dataContext.Save()
+        gift?.thanked = "1"
+        gift?.thankedDate = NSDate()
+        
+        //initialize formatter
+        dayTimePeriodFormatter.dateFormat = "MMMM d, y"
+        
+        thankButton.hidden = true
+        thankedOnLabel.hidden = false
+        thankedOnLabel!.text = "Thanked on " + dayTimePeriodFormatter.stringFromDate(gift!.thankedDate)
+        
+        dataContext.SetThanked(gift!)
     }
 }

@@ -92,8 +92,8 @@ class ImageDetailController: UIViewController {
     
     func CompleteThanks()
     {
-        gift?.thanked = 1
-        dataContext.Save()
+        gift?.thanked = "1"
+        dataContext.SetThanked(gift!)
     }
     
 }
