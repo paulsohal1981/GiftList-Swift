@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadGifts()
     {
         self.gifts = self.dataContext.GetAllGifts()
+        
     }
 
     

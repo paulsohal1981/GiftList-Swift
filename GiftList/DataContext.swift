@@ -70,7 +70,11 @@ class DataContext {
     {
         var gifts:[Gift] = []
         
+        //Request Entity
         var request = NSFetchRequest(entityName: self.GiftEntity)
+        
+        //Add Sort descriptor
+        request.sortDescriptors = [NSSortDescriptor(key: "createdDate", ascending: false)]
         
         var results = self.context.executeFetchRequest(request, error: nil)
         
