@@ -43,6 +43,7 @@
 		2D9DC1E31B50DBC7004D25CE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1E21B50DBC7004D25CE /* libsqlite3.dylib */; };
 		2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */; };
 		2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */; };
+		2DF273DC1B63E4BA0004D9CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF273DB1B63E4BA0004D9CD /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		2D9DC1E21B50DBC7004D25CE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGiftController.swift; sourceTree = "<group>"; };
 		2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailController.swift; sourceTree = "<group>"; };
+		2DF273DB1B63E4BA0004D9CD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				2D8334431B418406007BC016 /* photo.png */,
 				2D4510301B3374800085B2CE /* DSC_0072.jpg */,
 				2D45102E1B33653E0085B2CE /* Gift.swift */,
+				2DF273DB1B63E4BA0004D9CD /* Event.swift */,
 				2D4510011B3334E80085B2CE /* AppDelegate.swift */,
 				2D4510061B3334E80085B2CE /* GiftListController.swift */,
 				2D72E6351B502708005689B3 /* GiftCustomCell.swift */,
@@ -338,6 +341,7 @@
 				2D72E6361B502708005689B3 /* GiftCustomCell.swift in Sources */,
 				2D45102F1B33653E0085B2CE /* Gift.swift in Sources */,
 				2D4510071B3334E80085B2CE /* GiftListController.swift in Sources */,
+				2DF273DC1B63E4BA0004D9CD /* Event.swift in Sources */,
 				2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */,
 				2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */,
 				2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */,

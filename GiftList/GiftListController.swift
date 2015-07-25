@@ -35,7 +35,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //Add background to table view
         self.tableView.rowHeight = 200
-        self.tableView.contentInset = UIEdgeInsetsZero
+        //self.tableView.contentInset = UIEdgeInsetsZero
+        self.tableView.contentInset = UIEdgeInsetsMake(55, 0, 0, 0);
         
         //Register the custom cell
         var nib = UINib(nibName: "GiftTableCellView", bundle: nil)
