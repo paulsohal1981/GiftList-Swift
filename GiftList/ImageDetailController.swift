@@ -53,7 +53,7 @@ class ImageDetailController: UIViewController {
     }
     
     @IBAction func shareButtonClicked(sender: AnyObject) {
-        let textToShare = "Thank you for the gift!"
+        let textToShare = "Thank you for the gift, \(gift!.name)!"
         
         //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
             if let myImage = UIImage(data: self.gift!.frontImage)

@@ -31,7 +31,7 @@ class GiftCustomCell : UITableViewCell {
     
     
     @IBAction func thankSelected(sender: AnyObject) {
-        let textToShare = "Thank you for the gift!"
+        let textToShare = "Thank you for the gift, \(gift!.name)!"
         
         //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
         if let myImage = self.giftImage.image
