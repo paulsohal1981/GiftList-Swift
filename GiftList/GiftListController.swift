@@ -13,11 +13,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var addGiftButton: UIButton!
+    
+    
     var events = []
     var gifts : [Gift] = []
     var selectedGift : Gift? = nil
     var dataContext = DataContext()
-    
+
     let giftDetailSegueName = "giftDetailSegue"
     let dayTimePeriodFormatter = NSDateFormatter()
 
@@ -59,6 +62,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadGifts()
     {
         self.gifts = self.dataContext.GetAllGifts()
+        
+        
+        if(self.gifts.count == 0)
+        {
+            addGiftButton.hidden = false;
+            tableView.hidden = true
+        }
+        else
+        {
+            addGiftButton.hidden = true;
+            tableView.hidden = false;
+        }
+
         
     }
 
@@ -139,5 +155,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
+    @IBAction func addGift(sender: AnyObject)
+    {
+        performSegueWithIdentifier("addGiftSegue", sender: sender)
+    }
 }
 
