@@ -70,6 +70,9 @@ At the moment it's only used to perform custom animations on didScroll.
     @IBOutlet var prevButton:UIButton?
     @IBOutlet weak var closeButton: UIButton!
 
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
     
     var currentPage:Int{    // The index of the current page (readonly)
         get{
