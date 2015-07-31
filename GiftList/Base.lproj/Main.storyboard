@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mxI-Gg-8Cn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LBy-bQ-M3Q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -25,10 +25,220 @@
             </objects>
             <point key="canvasLocation" x="343" y="462"/>
         </scene>
+        <!--Gift List Intro Controller-->
+        <scene sceneID="LY4-8E-3cT">
+            <objects>
+                <viewController id="LBy-bQ-M3Q" customClass="GiftListIntroController" customModule="GiftList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OCF-HZ-khb"/>
+                        <viewControllerLayoutGuide type="bottom" id="gp1-rp-kr3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b4r-yY-AW1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="mxI-Gg-8Cn" kind="show" identifier="GiftListSegue" id="MYf-Dl-qoF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaR-ol-imh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="-232"/>
+        </scene>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="bJf-cp-cjj">
+            <objects>
+                <viewController storyboardIdentifier="walk0" id="Dw8-0E-fel" customClass="BWWalkthroughViewController" customModule="GiftList" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CFw-ZS-oVE"/>
+                        <viewControllerLayoutGuide type="bottom" id="cY0-WB-sbo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yUB-Xu-e2l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fcl-hs-JAE">
+                                <rect key="frame" x="0.0" y="504" width="600" height="37"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fcl-hs-JAE" secondAttribute="trailing" id="VOU-Rv-XbW"/>
+                            <constraint firstItem="fcl-hs-JAE" firstAttribute="leading" secondItem="yUB-Xu-e2l" secondAttribute="leading" id="aMd-0m-6ik"/>
+                            <constraint firstAttribute="centerX" secondItem="fcl-hs-JAE" secondAttribute="centerX" constant="-0.5" id="hXq-fj-5sE"/>
+                            <constraint firstItem="cY0-WB-sbo" firstAttribute="top" secondItem="fcl-hs-JAE" secondAttribute="bottom" constant="59" id="uVI-qG-A7V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="fcl-hs-JAE" id="WqC-7J-7fA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBg-l8-nhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="-228"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="5lm-tc-WEE">
+            <objects>
+                <viewController storyboardIdentifier="walk1" id="VFd-xo-LH9" customClass="BWWalkthroughPageViewController" customModule="GiftList" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sdD-ap-xih"/>
+                        <viewControllerLayoutGuide type="bottom" id="O6m-y5-JEg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dRK-sf-2qX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReveiveGift.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G0O-5a-Evw">
+                                <rect key="frame" x="-5" y="0.0" width="612" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture of your gifts" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZX-Ff-vSB">
+                                <rect key="frame" x="0.0" y="274" width="600" height="51"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O6m-y5-JEg" firstAttribute="top" secondItem="G0O-5a-Evw" secondAttribute="bottom" id="A3I-qN-8Jy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G0O-5a-Evw" secondAttribute="trailing" constant="-23" id="B59-yv-3cj"/>
+                            <constraint firstAttribute="trailing" secondItem="SZX-Ff-vSB" secondAttribute="trailing" id="DXJ-y8-ACg"/>
+                            <constraint firstItem="O6m-y5-JEg" firstAttribute="top" secondItem="SZX-Ff-vSB" secondAttribute="bottom" constant="275" id="RvK-af-tSl"/>
+                            <constraint firstItem="G0O-5a-Evw" firstAttribute="leading" secondItem="dRK-sf-2qX" secondAttribute="leadingMargin" constant="-21" id="T9y-7v-52a"/>
+                            <constraint firstAttribute="centerY" secondItem="SZX-Ff-vSB" secondAttribute="centerY" constant="0.5" id="ZQE-G0-5IF"/>
+                            <constraint firstItem="G0O-5a-Evw" firstAttribute="top" secondItem="sdD-ap-xih" secondAttribute="bottom" constant="-20" id="a8w-4f-WXc"/>
+                            <constraint firstItem="G0O-5a-Evw" firstAttribute="top" secondItem="sdD-ap-xih" secondAttribute="bottom" constant="-20" id="aFD-8D-WA3"/>
+                            <constraint firstItem="SZX-Ff-vSB" firstAttribute="leading" secondItem="dRK-sf-2qX" secondAttribute="leading" id="dpX-K2-OHB"/>
+                            <constraint firstAttribute="centerX" secondItem="SZX-Ff-vSB" secondAttribute="centerX" constant="-6" id="ktd-8t-mYO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZQE-G0-5IF"/>
+                                <exclude reference="ktd-8t-mYO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iW9-fs-JDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="-232"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="JkC-fX-M7A">
+            <objects>
+                <viewController storyboardIdentifier="walk2" id="4yl-cE-r1x" customClass="BWWalkthroughPageViewController" customModule="GiftList" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="naE-wT-276"/>
+                        <viewControllerLayoutGuide type="bottom" id="kjI-wf-t3y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nwu-fM-5Ak">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GiftList.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qqf-SC-SG4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-K0-x6a">
+                                <rect key="frame" x="279" y="289" width="54" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of them" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tI-CM-7xa">
+                                <rect key="frame" x="0.0" y="274" width="600" height="51"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="37"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Baf-K0-x6a" secondAttribute="centerX" constant="-6" id="GM8-JD-jHU"/>
+                            <constraint firstItem="kjI-wf-t3y" firstAttribute="top" secondItem="5tI-CM-7xa" secondAttribute="bottom" constant="275" id="Kbj-lk-P3C"/>
+                            <constraint firstAttribute="trailing" secondItem="5tI-CM-7xa" secondAttribute="trailing" id="Zmb-Pq-di6"/>
+                            <constraint firstAttribute="centerY" secondItem="Baf-K0-x6a" secondAttribute="centerY" constant="0.5" id="bz1-JE-ADm"/>
+                            <constraint firstItem="Qqf-SC-SG4" firstAttribute="leading" secondItem="Nwu-fM-5Ak" secondAttribute="leadingMargin" constant="-16" id="cpT-5X-WpV"/>
+                            <constraint firstItem="Baf-K0-x6a" firstAttribute="top" secondItem="5tI-CM-7xa" secondAttribute="bottom" constant="275" id="eoA-sG-ocS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qqf-SC-SG4" secondAttribute="trailing" constant="-16" id="i9M-l6-lDJ"/>
+                            <constraint firstItem="Qqf-SC-SG4" firstAttribute="top" secondItem="naE-wT-276" secondAttribute="bottom" constant="-20" id="nsJ-9a-JFH"/>
+                            <constraint firstItem="kjI-wf-t3y" firstAttribute="top" secondItem="Qqf-SC-SG4" secondAttribute="bottom" id="wrQ-Ly-1VY"/>
+                            <constraint firstItem="5tI-CM-7xa" firstAttribute="leading" secondItem="Nwu-fM-5Ak" secondAttribute="leading" id="yXT-Rs-QMB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eoA-sG-ocS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xdh-Ud-l6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623" y="-230"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="EYo-Ro-4uX">
+            <objects>
+                <viewController storyboardIdentifier="walk3" id="f8Z-rD-eqO" customClass="BWWalkthroughPageViewController" customModule="GiftList" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="umU-e8-HNl"/>
+                        <viewControllerLayoutGuide type="bottom" id="MhZ-tK-RZ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PFw-hl-Tvb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intro Ruby.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fvo-Ml-q43">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Show gratitude and say &quot;Thanks&quot;!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z67-co-5uW">
+                                <rect key="frame" x="0.0" y="274" width="600" height="51"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MhZ-tK-RZ8" firstAttribute="top" secondItem="fvo-Ml-q43" secondAttribute="bottom" id="Eqr-PP-Cf4"/>
+                            <constraint firstItem="fvo-Ml-q43" firstAttribute="top" secondItem="umU-e8-HNl" secondAttribute="bottom" constant="-25" id="Jzw-Y8-SnG"/>
+                            <constraint firstAttribute="centerY" secondItem="fvo-Ml-q43" secondAttribute="centerY" constant="2.5" id="Nhr-cr-g7d"/>
+                            <constraint firstItem="fvo-Ml-q43" firstAttribute="top" secondItem="PFw-hl-Tvb" secondAttribute="top" id="SWT-9P-AQw"/>
+                            <constraint firstAttribute="centerX" secondItem="fvo-Ml-q43" secondAttribute="centerX" id="Yf8-78-YgF"/>
+                            <constraint firstAttribute="trailing" secondItem="z67-co-5uW" secondAttribute="trailing" id="chm-Xr-nNx"/>
+                            <constraint firstAttribute="trailing" secondItem="fvo-Ml-q43" secondAttribute="trailing" id="d3w-kX-HpG"/>
+                            <constraint firstItem="z67-co-5uW" firstAttribute="leading" secondItem="PFw-hl-Tvb" secondAttribute="leading" id="lm5-2D-OM7"/>
+                            <constraint firstItem="fvo-Ml-q43" firstAttribute="leading" secondItem="PFw-hl-Tvb" secondAttribute="leading" id="oVT-XK-Ozt"/>
+                            <constraint firstItem="MhZ-tK-RZ8" firstAttribute="top" secondItem="fvo-Ml-q43" secondAttribute="bottom" id="sVf-TA-2vy"/>
+                            <constraint firstItem="MhZ-tK-RZ8" firstAttribute="top" secondItem="z67-co-5uW" secondAttribute="bottom" constant="275" id="uEh-H6-x5B"/>
+                            <constraint firstItem="z67-co-5uW" firstAttribute="leading" secondItem="PFw-hl-Tvb" secondAttribute="leading" id="wV8-hi-JcE"/>
+                            <constraint firstAttribute="trailing" secondItem="z67-co-5uW" secondAttribute="trailing" id="yqY-Fn-wXU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jzw-Y8-SnG"/>
+                                <exclude reference="Nhr-cr-g7d"/>
+                                <exclude reference="Yf8-78-YgF"/>
+                                <exclude reference="chm-Xr-nNx"/>
+                                <exclude reference="wV8-hi-JcE"/>
+                                <exclude reference="Eqr-PP-Cf4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJx-io-rzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2259" y="-230"/>
+        </scene>
         <!--Gifts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GiftList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GiftList" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,7 +250,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture of your gift" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkd-c1-d5n">
                                 <rect key="frame" x="10" y="164" width="580" height="63"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="46"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="met-lg-OGo">
@@ -414,6 +624,9 @@
     </scenes>
     <resources>
         <image name="DSC_0072.jpg" width="4928" height="3264"/>
+        <image name="GiftList.jpg" width="750" height="1334"/>
+        <image name="Intro Ruby.jpg" width="750" height="1334"/>
+        <image name="ReveiveGift.jpg" width="2326" height="2832"/>
         <image name="photo.png" width="470" height="470"/>
     </resources>
 </document>

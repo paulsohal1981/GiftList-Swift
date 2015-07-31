@@ -12,7 +12,6 @@ import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var addGiftButton: UIButton!
     
     
@@ -75,7 +74,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             addGiftButton.hidden = true;
             tableView.hidden = false;
         }
-
         
     }
 
@@ -98,6 +96,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.giftImage?.image = UIImage(data: gift.frontImage)
         cell.name!.text = gift.name
         cell.date!.text = dayTimePeriodFormatter.stringFromDate(gift.createdDate)
+        cell.delegate = self;
         
        // println(gift.thanked)
         
@@ -160,5 +159,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         performSegueWithIdentifier("addGiftSegue", sender: sender)
     }
+    
+
 }
 

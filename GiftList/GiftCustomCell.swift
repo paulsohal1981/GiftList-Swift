@@ -15,6 +15,7 @@ class GiftCustomCell : UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var thankButton: UIButton!
     @IBOutlet weak var thankedOnLabel: UILabel!
+    weak var delegate:UIViewController?
     
     var dataContext = DataContext()
     let dayTimePeriodFormatter = NSDateFormatter()
@@ -30,7 +31,8 @@ class GiftCustomCell : UITableViewCell {
     }
     
     
-    @IBAction func thankSelected(sender: AnyObject) {
+    @IBAction func thankSelected(sender: AnyObject)
+    {
         let textToShare = "Thank you for the gift, \(gift!.name)!"
         
         //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
@@ -45,7 +47,9 @@ class GiftCustomCell : UITableViewCell {
             
             //self.presentViewController(activityVC, animated: true, completion: nil)
             
-            UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(activityVC, animated: true, completion: CompleteThanks)
+            delegate?.presentViewController(activityVC, animated: true, completion: CompleteThanks)
+            
+            //UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(activityVC, animated: true, completion: CompleteThanks)
         }
     }
     

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D119C371B69D1A1002F55E3 /* Intro Ruby.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */; };
 		2D3200C41B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */; };
+		2D40DE4D1B6862C700A21FB5 /* ReveiveGift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */; };
+		2D40DE4F1B686DCE00A21FB5 /* GiftList.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D40DE4E1B686DCE00A21FB5 /* GiftList.jpg */; };
 		2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510011B3334E80085B2CE /* AppDelegate.swift */; };
 		2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510031B3334E80085B2CE /* GiftList.xcdatamodeld */; };
 		2D4510071B3334E80085B2CE /* GiftListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510061B3334E80085B2CE /* GiftListController.swift */; };
@@ -19,6 +22,7 @@
 		2D45102F1B33653E0085B2CE /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102E1B33653E0085B2CE /* Gift.swift */; };
 		2D4510311B3374800085B2CE /* DSC_0072.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D4510301B3374800085B2CE /* DSC_0072.jpg */; };
 		2D5589F91B3771A900915E1D /* ImageZoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5589F81B3771A900915E1D /* ImageZoomController.swift */; };
+		2D6404551B687C7A0051A778 /* GiftListIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6404541B687C7A0051A778 /* GiftListIntroController.swift */; };
 		2D72E6361B502708005689B3 /* GiftCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E6351B502708005689B3 /* GiftCustomCell.swift */; };
 		2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72E6371B502821005689B3 /* GiftTableCellView.xib */; };
 		2D8334441B418406007BC016 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8334431B418406007BC016 /* photo.png */; };
@@ -44,6 +48,10 @@
 		2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */; };
 		2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */; };
 		2DF273DC1B63E4BA0004D9CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF273DB1B63E4BA0004D9CD /* Event.swift */; };
+		2DFC59F21B67150100ED4864 /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */; };
+		2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */; };
+		2DFC59F61B671D4300ED4864 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC59F41B671D4300ED4864 /* background1.jpg */; };
+		2DFC59F71B671D4300ED4864 /* balloons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC59F51B671D4300ED4864 /* balloons.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Intro Ruby.jpg"; sourceTree = "<group>"; };
 		2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_blue_mini_dots_on_sky_blue.jpg; sourceTree = "<group>"; };
+		2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ReveiveGift.jpg; sourceTree = "<group>"; };
+		2D40DE4E1B686DCE00A21FB5 /* GiftList.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GiftList.jpg; sourceTree = "<group>"; };
 		2D450FFC1B3334E80085B2CE /* GiftList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4510001B3334E80085B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D4510011B3334E80085B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +84,7 @@
 		2D45102E1B33653E0085B2CE /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		2D4510301B3374800085B2CE /* DSC_0072.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0072.jpg; sourceTree = "<group>"; };
 		2D5589F81B3771A900915E1D /* ImageZoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomController.swift; sourceTree = "<group>"; };
+		2D6404541B687C7A0051A778 /* GiftListIntroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListIntroController.swift; sourceTree = "<group>"; };
 		2D72E6351B502708005689B3 /* GiftCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCustomCell.swift; sourceTree = "<group>"; };
 		2D72E6371B502821005689B3 /* GiftTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftTableCellView.xib; sourceTree = "<group>"; };
 		2D8334431B418406007BC016 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
@@ -98,6 +110,10 @@
 		2DC9CA3F1B39D115005C2F52 /* CreateNewGiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGiftController.swift; sourceTree = "<group>"; };
 		2DD872311B4ABD5100AF7BEA /* ImageDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailController.swift; sourceTree = "<group>"; };
 		2DF273DB1B63E4BA0004D9CD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
+		2DFC59F41B671D4300ED4864 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		2DFC59F51B671D4300ED4864 /* balloons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = balloons.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,12 +176,16 @@
 		2D450FFE1B3334E80085B2CE /* GiftList */ = {
 			isa = PBXGroup;
 			children = (
+				2DFC59F81B671D4A00ED4864 /* walkthroughimages */,
 				2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */,
 				2D8334431B418406007BC016 /* photo.png */,
 				2D4510301B3374800085B2CE /* DSC_0072.jpg */,
 				2D45102E1B33653E0085B2CE /* Gift.swift */,
+				2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */,
+				2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */,
 				2DF273DB1B63E4BA0004D9CD /* Event.swift */,
 				2D4510011B3334E80085B2CE /* AppDelegate.swift */,
+				2D6404541B687C7A0051A778 /* GiftListIntroController.swift */,
 				2D4510061B3334E80085B2CE /* GiftListController.swift */,
 				2D72E6351B502708005689B3 /* GiftCustomCell.swift */,
 				2D5589F81B3771A900915E1D /* ImageZoomController.swift */,
@@ -230,6 +250,18 @@
 				2D9DC1C31B50DB0E004D25CE /* ParseUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DFC59F81B671D4A00ED4864 /* walkthroughimages */ = {
+			isa = PBXGroup;
+			children = (
+				2D40DE4E1B686DCE00A21FB5 /* GiftList.jpg */,
+				2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */,
+				2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */,
+				2DFC59F41B671D4300ED4864 /* background1.jpg */,
+				2DFC59F51B671D4300ED4864 /* balloons.jpg */,
+			);
+			name = walkthroughimages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,11 +347,16 @@
 			files = (
 				2D3200C41B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg in Resources */,
 				2D45100A1B3334E80085B2CE /* Main.storyboard in Resources */,
+				2D40DE4D1B6862C700A21FB5 /* ReveiveGift.jpg in Resources */,
 				2D4510311B3374800085B2CE /* DSC_0072.jpg in Resources */,
+				2DFC59F71B671D4300ED4864 /* balloons.jpg in Resources */,
 				2D8334441B418406007BC016 /* photo.png in Resources */,
+				2D40DE4F1B686DCE00A21FB5 /* GiftList.jpg in Resources */,
+				2D119C371B69D1A1002F55E3 /* Intro Ruby.jpg in Resources */,
 				2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */,
 				2D45100F1B3334E80085B2CE /* LaunchScreen.xib in Resources */,
 				2D45100C1B3334E80085B2CE /* Images.xcassets in Resources */,
+				2DFC59F61B671D4300ED4864 /* background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +379,11 @@
 				2D45102F1B33653E0085B2CE /* Gift.swift in Sources */,
 				2D4510071B3334E80085B2CE /* GiftListController.swift in Sources */,
 				2DF273DC1B63E4BA0004D9CD /* Event.swift in Sources */,
+				2D6404551B687C7A0051A778 /* GiftListIntroController.swift in Sources */,
 				2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */,
+				2DFC59F21B67150100ED4864 /* BWWalkthroughPageViewController.swift in Sources */,
 				2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */,
+				2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */,
 				2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */,
 				2D5589F91B3771A900915E1D /* ImageZoomController.swift in Sources */,
 				2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */,
