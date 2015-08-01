@@ -62,8 +62,9 @@ class ImageDetailController: UIViewController {
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
             //New Excluded Activities Code
-            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
-            //
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList,UIActivityTypeAssignToContact]
+            
+            activityVC.completionWithItemsHandler = doneSharingHandler
             
             self.presentViewController(activityVC, animated: true, completion: nil)
             
@@ -89,10 +90,23 @@ class ImageDetailController: UIViewController {
         imageZoomController.image = self.detailImage.image
         
     }
+    func doneSharingHandler(activityType: String!, completed: Bool, returnedItems: [AnyObject]!, error: NSError!) {
+        // Return if cancelled
+        if (!completed) {
+            return
+        }
+        else
+        {
+            CompleteThanks()
+        }
+        
+    }
     
     func CompleteThanks()
     {
+        
         gift?.thanked = "1"
+        gift?.thankedDate = NSDate()
         dataContext.SetThanked(gift!)
     }
     

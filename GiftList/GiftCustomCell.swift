@@ -42,19 +42,31 @@ class GiftCustomCell : UITableViewCell {
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
             //New Excluded Activities Code
-            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList,UIActivityTypeAssignToContact]
             
+            activityVC.completionWithItemsHandler = doneSharingHandler;
             
-            //self.presentViewController(activityVC, animated: true, completion: nil)
+            delegate?.presentViewController(activityVC, animated: true, completion: nil)
             
-            delegate?.presentViewController(activityVC, animated: true, completion: CompleteThanks)
-            
-            //UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(activityVC, animated: true, completion: CompleteThanks)
+
+        }
+    }
+    
+    func doneSharingHandler(activityType: String!, completed: Bool, returnedItems: [AnyObject]!, error: NSError!) {
+        // Return if cancelled
+        if (!completed) {
+            return
+        }
+        else
+        {
+            CompleteThanks()
         }
     }
     
     func CompleteThanks()
     {
+        
+        
         gift?.thanked = "1"
         gift?.thankedDate = NSDate()
         
