@@ -11,6 +11,7 @@ import UIKit
 class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDelegate
 {
     var dataContext = DataContext()
+    //var parseAnalyticUtility = ParseAnalyticUtility()
     var introHasShow = false
     
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
         
         if(introHasShow == false)
         {
-            var gifts = self.dataContext.GetAllGifts()
+            let gifts = self.dataContext.GetAllGifts()
         
             if (gifts.count > 0)
             {
@@ -46,9 +47,9 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
         // Get view controllers and build the walkthrough
         let stb = UIStoryboard(name: "Main", bundle: nil)
         let walkthrough = stb.instantiateViewControllerWithIdentifier("walk0") as! BWWalkthroughViewController
-        let page_one = stb.instantiateViewControllerWithIdentifier("walk1") as! UIViewController
-        let page_two = stb.instantiateViewControllerWithIdentifier("walk2")as! UIViewController
-        let page_three = stb.instantiateViewControllerWithIdentifier("walk3")as! UIViewController
+        let page_one = stb.instantiateViewControllerWithIdentifier("walk1") 
+        let page_two = stb.instantiateViewControllerWithIdentifier("walk2")
+        let page_three = stb.instantiateViewControllerWithIdentifier("walk3")
         
         
         // Attach the pages to the master
@@ -57,12 +58,13 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
         walkthrough.addViewController(page_two)
         walkthrough.addViewController(page_three)
         
-        
+        //parseAnalyticUtility.TourStarted();
         self.presentViewController(walkthrough, animated: true, completion: nil)
     }
     
     func walkthroughCloseButtonPressed()
     {
+         //parseAnalyticUtility.TourEnded();
          introHasShow = true
          self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -72,8 +74,8 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
         if(currentPage == 2)
         {
             //Enable Get Started button
-            sleep(2)
-            walkthroughCloseButtonPressed()
+           // sleep(2)
+            //walkthroughCloseButtonPressed()
         }
     }
     

@@ -43,6 +43,7 @@ enum WalkthroughAnimationType:String{
 
 class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     
+    @IBOutlet weak var getStartedButton: UILabel!
     private var animation:WalkthroughAnimationType = .Linear
     private var subsWeights:[CGPoint] = Array()
     private var notAnimatableViews:[Int] = [] // Array of views' tags that should not be animated during the scroll/transition
@@ -62,10 +63,10 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     @IBInspectable var animateAlpha:Bool = false
     @IBInspectable var staticTags:String {                                 // A comma separated list of tags that you don't want to animate during the transition/scroll 
         set(value){
-            self.notAnimatableViews = map(split(value){$0 == ","}){String($0).toInt()!}
+            self.notAnimatableViews = value.characters.split{$0 == ","}.map { String($0) }.map{Int(String($0))!}
         }
         get{
-            return ",".join(map(notAnimatableViews){String($0)})
+            return notAnimatableViews.map{String($0)}.joinWithSeparator(",")
         }
     }
     
@@ -79,7 +80,7 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
         for v in view.subviews{
             speed.x += speedVariance.x
             speed.y += speedVariance.y
-            if !contains(notAnimatableViews, v.tag){
+            if !notAnimatableViews.contains(v.tag){
                 subsWeights.append(speed)
             }
         }
@@ -117,7 +118,7 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     // MARK: Animations (WIP)
     
     private func animationAlpha(index:Int, var _ offset:CGFloat){
-        let cView = view.subviews[index] as! UIView
+        let cView = view.subviews[index] 
         
         if(offset > 1.0){
             offset = 1.0 + (1.0 - offset)
@@ -127,7 +128,7 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     
     private func animationCurve(index:Int, _ offset:CGFloat){
         var transform = CATransform3DIdentity
-        var x:CGFloat = (1.0 - offset) * 10
+        let x:CGFloat = (1.0 - offset) * 10
         transform = CATransform3DTranslate(transform, (pow(x,3) - (x * 25)) * subsWeights[index].x, (pow(x,3) - (x * 20)) * subsWeights[index].y, 0 )
         applyTransform(index, transform: transform)
     }
@@ -139,14 +140,14 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
         if(tmpOffset > 1.0){
             tmpOffset = 1.0 + (1.0 - tmpOffset)
         }
-        var scale:CGFloat = (1.0 - tmpOffset)
+        let scale:CGFloat = (1.0 - tmpOffset)
         transform = CATransform3DScale(transform, 1 - scale , 1 - scale, 1.0)
         applyTransform(index, transform: transform)
     }
     
     private func animationLinear(index:Int, _ offset:CGFloat){
         var transform = CATransform3DIdentity
-        var mx:CGFloat = (1.0 - offset) * 100
+        let mx:CGFloat = (1.0 - offset) * 100
         transform = CATransform3DTranslate(transform, mx * subsWeights[index].x, mx * subsWeights[index].y, 0 )
         applyTransform(index, transform: transform)
     }
@@ -165,7 +166,7 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     
     private func applyTransform(index:Int, transform:CATransform3D){
         if let subview = view.subviews[index] as? UIView{
-            if !contains(notAnimatableViews, subview.tag){
+            if !notAnimatableViews.contains(subview.tag){
                 view.subviews[index].layer.transform = transform
             }
         }

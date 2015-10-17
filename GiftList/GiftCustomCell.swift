@@ -52,7 +52,7 @@ class GiftCustomCell : UITableViewCell {
         }
     }
     
-    func doneSharingHandler(activityType: String!, completed: Bool, returnedItems: [AnyObject]!, error: NSError!) {
+    func doneSharingHandler(activityType: String?, completed: Bool, returnedItems: [AnyObject]?, error: NSError?) {
         // Return if cancelled
         if (!completed) {
             return

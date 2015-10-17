@@ -20,22 +20,25 @@ class DataContext {
     func InsertGift(name: String, uiImageName: String)
     {
         
-        var newGift = NSEntityDescription.insertNewObjectForEntityForName("Gift", inManagedObjectContext: context) as! Gift
+        let newGift = NSEntityDescription.insertNewObjectForEntityForName("Gift", inManagedObjectContext: context) as! Gift
         
         //Map incoming gift to new gift
         
         newGift.name = name
-        newGift.frontImage = UIImageJPEGRepresentation(UIImage(named: uiImageName), 1)
-//        newGift.backImage = gift.backImage
+        newGift.frontImage = UIImageJPEGRepresentation(UIImage(named: uiImageName)!, 1)!
+        do {
+            //        newGift.backImage = gift.backImage
         
-        self.context.save(nil)
+            try self.context.save()
+        } catch _ {
+        }
         
     }
     
     //Insert with Front and Back Image
     func InsertGiftWithFrontandBackImage(name: String, frontImage: NSData, backImage: NSData)
     {
-        var newGift = NSEntityDescription.insertNewObjectForEntityForName("Gift", inManagedObjectContext: context) as! Gift
+        let newGift = NSEntityDescription.insertNewObjectForEntityForName("Gift", inManagedObjectContext: context) as! Gift
         
         //Map incoming gift to new gift
         
@@ -46,7 +49,10 @@ class DataContext {
         newGift.createdDate = NSDate()
         
         
-        self.context.save(nil)
+        do {
+            try self.context.save()
+        } catch _ {
+        }
         
     }
     
@@ -55,24 +61,30 @@ class DataContext {
     {
         
         self.context.deleteObject(gift)
-        self.context.save(nil)
+        do {
+            try self.context.save()
+        } catch _ {
+        }
     }
     
     func SetThanked(gift: Gift)
     {
-        println(gift.objectID)
+        print(gift.objectID)
         //Request Entity
-        var request = NSFetchRequest(entityName: self.GiftEntity)
+        let request = NSFetchRequest(entityName: self.GiftEntity)
         let predicate = NSPredicate(format: "createdDate == %@", gift.createdDate)
         
         request.predicate = predicate
         
-        let fetchedEntities = self.context.executeFetchRequest(request, error: nil) as! [Gift]
+        let fetchedEntities = (try! self.context.executeFetchRequest(request)) as! [Gift]
         
         fetchedEntities.first?.thanked = gift.thanked
         fetchedEntities.first?.thankedDate = gift.thankedDate
      
-        self.context.save(nil)
+        do {
+            try self.context.save()
+        } catch _ {
+        }
     }
     
     func GetAllGifts() -> [Gift]
@@ -80,12 +92,12 @@ class DataContext {
         var gifts:[Gift] = []
         
         //Request Entity
-        var request = NSFetchRequest(entityName: self.GiftEntity)
+        let request = NSFetchRequest(entityName: self.GiftEntity)
         
         //Add Sort descriptor
         request.sortDescriptors = [NSSortDescriptor(key: "createdDate", ascending: false)]
         
-        var results = self.context.executeFetchRequest(request, error: nil)
+        let results = try? self.context.executeFetchRequest(request)
         
         if results != nil
         {
@@ -98,12 +110,12 @@ class DataContext {
     func GetGiftByObjectId(objectId: NSManagedObjectID) -> Gift
     {
         //Request Entity
-        var request = NSFetchRequest(entityName: self.GiftEntity)
+        let request = NSFetchRequest(entityName: self.GiftEntity)
         let predicate = NSPredicate(format: "objectID == %@", objectId)
         
         request.predicate = predicate
         
-        let fetchedEntities = self.context.executeFetchRequest(request, error: nil) as! [Gift]
+        let fetchedEntities = (try! self.context.executeFetchRequest(request)) as! [Gift]
         
         return fetchedEntities.first!
     }

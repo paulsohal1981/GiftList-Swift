@@ -36,7 +36,7 @@ class ImageDetailController: UIViewController {
         self.dateLabel.text = dayTimePeriodFormatter.stringFromDate(self.gift!.createdDate)
         
         //Add Gesture
-        var frontTapRecoginzer = UITapGestureRecognizer(target: self, action: "frontTapped")
+        let frontTapRecoginzer = UITapGestureRecognizer(target: self, action: "frontTapped")
         
         //Add tap even to front image view
         self.detailImage.addGestureRecognizer(frontTapRecoginzer)
@@ -85,12 +85,12 @@ class ImageDetailController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //Initiate Segue
-        var imageZoomController = segue.destinationViewController as! ImageZoomController
+        let imageZoomController = segue.destinationViewController as! ImageZoomController
         
         imageZoomController.image = self.detailImage.image
         
     }
-    func doneSharingHandler(activityType: String!, completed: Bool, returnedItems: [AnyObject]!, error: NSError!) {
+    func doneSharingHandler(activityType: String?, completed: Bool, returnedItems: [AnyObject]?, error: NSError?) {
         // Return if cancelled
         if (!completed) {
             return

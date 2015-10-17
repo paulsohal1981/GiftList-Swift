@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.contentInset = UIEdgeInsetsMake(55, 0, 0, 0);
         
         //Register the custom cell
-        var nib = UINib(nibName: "GiftTableCellView", bundle: nil)
+        let nib = UINib(nibName: "GiftTableCellView", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
         //initialize formatter
@@ -88,9 +88,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        var gift = self.gifts[indexPath.row] as Gift
+        let gift = self.gifts[indexPath.row] as Gift
         
-        var cell:GiftCustomCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! GiftCustomCell
+        let cell:GiftCustomCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! GiftCustomCell
         
         cell.gift = gift
         cell.giftImage?.image = UIImage(data: gift.frontImage)
@@ -130,7 +130,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if(editingStyle == UITableViewCellEditingStyle.Delete)
         {
-            var gift = self.gifts[indexPath.row]
+            let gift = self.gifts[indexPath.row]
             self.gifts.removeAtIndex(indexPath.row)
             
             //Delete the image
@@ -147,7 +147,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if( segue.identifier == "imageDetailSegue")
         {
-            var detailGiftController = segue.destinationViewController as! ImageDetailController
+            let detailGiftController = segue.destinationViewController as! ImageDetailController
             
             detailGiftController.gift = self.selectedGift
         }

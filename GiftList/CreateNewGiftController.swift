@@ -22,9 +22,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         super.viewDidLoad()
         
         //Create a tapGesture for the image
-        var frontTapRecoginzer = UITapGestureRecognizer(target: self, action: "frontTapped")
-        var backTapRecognizer = UITapGestureRecognizer(target: self, action: "backTapped")
-        
+        let frontTapRecoginzer = UITapGestureRecognizer(target: self, action: "frontTapped")
         
         //Add tap even to front image view
         self.frontImage.addGestureRecognizer(frontTapRecoginzer)
@@ -53,7 +51,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         //Check to see if device has a camera
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
         {
-            var cameraViewController = UIImagePickerController()
+            let cameraViewController = UIImagePickerController()
             cameraViewController.sourceType = UIImagePickerControllerSourceType.Camera
             cameraViewController.delegate = self
             
@@ -88,10 +86,10 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
     
     //Save Button
     @IBAction func SaveNewGift(sender: AnyObject) {
-        var frontUIImage = UIImageJPEGRepresentation(self.frontImage.image, 1)
-        var backUIImage = UIImageJPEGRepresentation(self.frontImage.image, 1)
+        let frontUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
+        let backUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
         
-        self.dataContext.InsertGiftWithFrontandBackImage(self.GiftName.text, frontImage: frontUIImage , backImage: backUIImage)
+        self.dataContext.InsertGiftWithFrontandBackImage(self.GiftName.text!, frontImage: frontUIImage! , backImage: backUIImage!)
         
         self.dismissViewControllerAnimated(true
             , completion: nil)
