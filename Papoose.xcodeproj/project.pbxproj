@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2D119C371B69D1A1002F55E3 /* Intro Ruby.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */; };
+		2D1D37D41BDAF6CD00A79FA3 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D37D21BDAF6CD00A79FA3 /* UserSettings.swift */; settings = {ASSET_TAGS = (); }; };
 		2D30BE261BD2A48000286E2A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D30BE241BD2A48000286E2A /* libsqlite3.dylib */; };
 		2D30BE271BD2A48000286E2A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D30BE251BD2A48000286E2A /* libz.1.dylib */; };
-		2D3200C41B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */; };
 		2D40DE4D1B6862C700A21FB5 /* ReveiveGift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */; };
 		2D40DE4F1B686DCE00A21FB5 /* GiftList.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D40DE4E1B686DCE00A21FB5 /* GiftList.jpg */; };
 		2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4510011B3334E80085B2CE /* AppDelegate.swift */; };
@@ -42,15 +42,14 @@
 		2DF273DC1B63E4BA0004D9CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF273DB1B63E4BA0004D9CD /* Event.swift */; };
 		2DFC59F21B67150100ED4864 /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */; };
 		2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */; };
-		2DFC59F61B671D4300ED4864 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC59F41B671D4300ED4864 /* background1.jpg */; };
-		2DFC59F71B671D4300ED4864 /* balloons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC59F51B671D4300ED4864 /* balloons.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D0E83361BDA7B5000506F2E /* GiftList2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiftList2.xcdatamodel; sourceTree = "<group>"; };
 		2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Intro Ruby.jpg"; sourceTree = "<group>"; };
+		2D1D37D21BDAF6CD00A79FA3 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = ../UserSettings.swift; sourceTree = "<group>"; };
 		2D30BE241BD2A48000286E2A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		2D30BE251BD2A48000286E2A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
-		2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_blue_mini_dots_on_sky_blue.jpg; sourceTree = "<group>"; };
 		2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ReveiveGift.jpg; sourceTree = "<group>"; };
 		2D40DE4E1B686DCE00A21FB5 /* GiftList.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GiftList.jpg; sourceTree = "<group>"; };
 		2D450FFC1B3334E80085B2CE /* GiftList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,8 +83,6 @@
 		2DF273DB1B63E4BA0004D9CD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
-		2DFC59F41B671D4300ED4864 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
-		2DFC59F51B671D4300ED4864 /* balloons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = balloons.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,15 +129,15 @@
 		2D450FFE1B3334E80085B2CE /* GiftList */ = {
 			isa = PBXGroup;
 			children = (
+				2D4510011B3334E80085B2CE /* AppDelegate.swift */,
 				2D4510081B3334E80085B2CE /* Main.storyboard */,
 				2DFC59F81B671D4A00ED4864 /* walkthroughimages */,
-				2D3200C31B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg */,
 				2D8334431B418406007BC016 /* photo.png */,
+				2D1D37D21BDAF6CD00A79FA3 /* UserSettings.swift */,
 				2D45102E1B33653E0085B2CE /* Gift.swift */,
+				2DF273DB1B63E4BA0004D9CD /* Event.swift */,
 				2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */,
 				2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */,
-				2DF273DB1B63E4BA0004D9CD /* Event.swift */,
-				2D4510011B3334E80085B2CE /* AppDelegate.swift */,
 				2D6404541B687C7A0051A778 /* GiftListIntroController.swift */,
 				2D4510061B3334E80085B2CE /* GiftListController.swift */,
 				2D72E6351B502708005689B3 /* GiftCustomCell.swift */,
@@ -191,8 +188,6 @@
 				2D40DE4E1B686DCE00A21FB5 /* GiftList.jpg */,
 				2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */,
 				2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */,
-				2DFC59F41B671D4300ED4864 /* background1.jpg */,
-				2DFC59F51B671D4300ED4864 /* balloons.jpg */,
 			);
 			name = walkthroughimages;
 			sourceTree = "<group>";
@@ -229,7 +224,6 @@
 				TargetAttributes = {
 					2D450FFB1B3334E80085B2CE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = Q7W3YMKU4N;
 					};
 				};
 			};
@@ -256,17 +250,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D3200C41B4CAFF7005CEFE6 /* light_blue_mini_dots_on_sky_blue.jpg in Resources */,
 				2D45100A1B3334E80085B2CE /* Main.storyboard in Resources */,
 				2D40DE4D1B6862C700A21FB5 /* ReveiveGift.jpg in Resources */,
-				2DFC59F71B671D4300ED4864 /* balloons.jpg in Resources */,
 				2D8334441B418406007BC016 /* photo.png in Resources */,
 				2D40DE4F1B686DCE00A21FB5 /* GiftList.jpg in Resources */,
 				2D119C371B69D1A1002F55E3 /* Intro Ruby.jpg in Resources */,
 				2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */,
 				2D45100F1B3334E80085B2CE /* LaunchScreen.xib in Resources */,
 				2D45100C1B3334E80085B2CE /* Images.xcassets in Resources */,
-				2DFC59F61B671D4300ED4864 /* background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +280,7 @@
 				2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */,
 				2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */,
 				2D5589F91B3771A900915E1D /* ImageZoomController.swift in Sources */,
+				2D1D37D41BDAF6CD00A79FA3 /* UserSettings.swift in Sources */,
 				2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,10 +403,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GiftList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acceler.giftlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,10 +424,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GiftList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acceler.giftlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -464,9 +460,10 @@
 		2D4510031B3334E80085B2CE /* GiftList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2D0E83361BDA7B5000506F2E /* GiftList2.xcdatamodel */,
 				2D4510041B3334E80085B2CE /* GiftList.xcdatamodel */,
 			);
-			currentVersion = 2D4510041B3334E80085B2CE /* GiftList.xcdatamodel */;
+			currentVersion = 2D0E83361BDA7B5000506F2E /* GiftList2.xcdatamodel */;
 			path = GiftList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

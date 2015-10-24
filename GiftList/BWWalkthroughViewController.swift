@@ -70,7 +70,7 @@ At the moment it's only used to perform custom animations on didScroll.
     @IBOutlet var nextButton:UIButton?
     @IBOutlet var prevButton:UIButton?
     @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var facebookLogin: UIImageView!
+
     
     //facebook related
     let permissions = ["public_profile"];
@@ -133,7 +133,7 @@ At the moment it's only used to perform custom animations on didScroll.
         super.viewDidLoad()
         
         closeButton.hidden = true;
-        facebookLogin.hidden = true;
+      
         // Initialize UI Elements
         
         pageControl?.addTarget(self, action: "pageControlDidTouch", forControlEvents: UIControlEvents.TouchUpInside)
@@ -154,7 +154,7 @@ At the moment it's only used to perform custom animations on didScroll.
         // Do any additional setup after loading the view, typically from a nib.
         //Add click evet
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("facebookLoginClick:"))
-        facebookLogin.addGestureRecognizer(tapGestureRecognizer)
+
         
 //        if (FBSDKAccessToken.currentAccessToken() != nil)
 //        {
@@ -302,9 +302,6 @@ At the moment it's only used to perform custom animations on didScroll.
         if currentPage == controllers.count - 1{
             nextButton?.hidden = true
             closeButton.hidden = false;
-            
-            //Only show this is the user hasn't already logged in
-            facebookLogin.hidden = loggedIn;
             
         }else{
             nextButton?.hidden = false

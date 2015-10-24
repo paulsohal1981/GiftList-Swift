@@ -13,7 +13,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
 {
     var dataContext = DataContext()
     var isFrontPicture : Bool = true
-
+    var userSettings : UserSettings? = nil
     
     @IBOutlet weak var frontImage: UIImageView!
     @IBOutlet weak var GiftName: UITextField!
@@ -27,6 +27,8 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         //Add tap even to front image view
         self.frontImage.addGestureRecognizer(frontTapRecoginzer)
         //self.backImage.addGestureRecognizer(backTapRecognizer)
+        
+        self.userSettings = dataContext.GetUserSettings();
     }
     
     //Tap Events
@@ -42,6 +44,11 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         
         self.callCamera()
         //Open Camera
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     
@@ -86,13 +93,23 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
     
     //Save Button
     @IBAction func SaveNewGift(sender: AnyObject) {
-        let frontUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
-        let backUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
         
-        self.dataContext.InsertGiftWithFrontandBackImage(self.GiftName.text!, frontImage: frontUIImage! , backImage: backUIImage!)
+        let gifts = dataContext.GetAllGifts();
+        if(gifts.count > Int(self.userSettings!.giftcount))
+        {
+            let alert = UIAlertController(title: "Congratulation", message: "We're glad you enjoy using Papoose. To continue adding unlimited gifts, please unlock the forver gift feature.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            let frontUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
+            let backUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
         
-        self.dismissViewControllerAnimated(true
-            , completion: nil)
+            self.dataContext.InsertGiftWithFrontandBackImage(self.GiftName.text!, frontImage: frontUIImage! , backImage: backUIImage!)
+        
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
 }
