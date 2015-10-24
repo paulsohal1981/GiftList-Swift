@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="Event" representedClassName="PRODUCT_MODULE_NAME.Event" syncable="YES">
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Gift" representedClassName="GiftList.Gift" syncable="YES">
+        <attribute name="backImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frontImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thanked" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thankedDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="UserSettings" representedClassName=".UserSettings" syncable="YES">
+        <attribute name="giftcount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="-45" positionY="45" width="128" height="75"/>
+        <element name="Gift" positionX="-45" positionY="0" width="128" height="150"/>
+        <element name="UserSettings" positionX="-36" positionY="63" width="128" height="60"/>
+    </elements>
+</model>
