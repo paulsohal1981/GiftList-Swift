@@ -8,12 +8,17 @@
 
 import Foundation
 import UIKit
+import StoreKit
 
-class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver
 {
     var dataContext = DataContext()
     var isFrontPicture : Bool = true
     var userSettings : UserSettings? = nil
+    
+    let productIdentifiers = Set([Settings.inAppProductId])
+    var product: SKProduct?
+    var productsArray = Array<SKProduct>()
     
     @IBOutlet weak var frontImage: UIImageView!
     @IBOutlet weak var GiftName: UITextField!
@@ -29,6 +34,12 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         //self.backImage.addGestureRecognizer(backTapRecognizer)
         
         self.userSettings = dataContext.GetUserSettings();
+        
+        // Set IAPS
+        requestProductData()
+        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+       
+
     }
     
     //Tap Events
@@ -97,9 +108,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         let gifts = dataContext.GetAllGifts();
         if(gifts.count > Int(self.userSettings!.giftcount))
         {
-            let alert = UIAlertController(title: "Congratulation", message: "We're glad you enjoy using Papoose. To continue adding unlimited gifts, please unlock the forver gift feature.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            buyUnlimitedGift()
         }
         else
         {
@@ -111,5 +120,80 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
+    
+    
+    //Initiates a Request to recieve Product Data
+    func requestProductData()
+    {
+        //Check to see if user can make a payment
+        if SKPaymentQueue.canMakePayments() {
+            
+            //Send a request to app store to get the products.
+            let request = SKProductsRequest(productIdentifiers: self.productIdentifiers)
+            request.delegate = self
+            request.start()
+            
+        } else {
+            let alert = UIAlertController(title: "In-App Purchases Not Enabled", message: "Please enable In App Purchase in Settings", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Settings", style: UIAlertActionStyle.Default, handler: { alertAction in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+                
+                let url: NSURL? = NSURL(string: UIApplicationOpenSettingsURLString)
+                if url != nil
+                {
+                    UIApplication.sharedApplication().openURL(url!)
+                }
+                
+            }))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { alertAction in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func buyUnlimitedGift() {
+        let payment = SKPayment(product: product!)
+        SKPaymentQueue.defaultQueue().addPayment(payment)
+    }
+    
+    //Request for product is recieved and products are set in the controller.
+    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+        
+        var products = response.products
+        
+        if (products.count != 0) {
+            for var i = 0; i < products.count; i++
+            {
+                self.product = products[i]
+                self.productsArray.append(product!)
+            }
+           
+        } else {
+            print("No products found")
+        }
+        
+    }
+    
+    func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction])   {
+       
+        for transaction:AnyObject in transactions {
+            if let trans:SKPaymentTransaction = transaction as? SKPaymentTransaction{
+                switch trans.transactionState {
+                case .Purchased:
+                        dataContext.SetUserSettingGiftCount(10000)
+                    break;
+                case .Failed:
+
+                    break;
+                    // case .Restored:
+                    //[self restoreTransaction:transaction];
+                default:
+                    break;
+                }
+            }
+        }
+    }
+    
     
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D119C371B69D1A1002F55E3 /* Intro Ruby.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D119C361B69D1A1002F55E3 /* Intro Ruby.jpg */; };
-		2D1D37D41BDAF6CD00A79FA3 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D37D21BDAF6CD00A79FA3 /* UserSettings.swift */; settings = {ASSET_TAGS = (); }; };
+		2D1D37D41BDAF6CD00A79FA3 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D37D21BDAF6CD00A79FA3 /* UserSettings.swift */; };
 		2D30BE261BD2A48000286E2A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D30BE241BD2A48000286E2A /* libsqlite3.dylib */; };
 		2D30BE271BD2A48000286E2A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D30BE251BD2A48000286E2A /* libz.1.dylib */; };
 		2D40DE4D1B6862C700A21FB5 /* ReveiveGift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D40DE4C1B6862C700A21FB5 /* ReveiveGift.jpg */; };
@@ -26,6 +26,7 @@
 		2D72E6361B502708005689B3 /* GiftCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E6351B502708005689B3 /* GiftCustomCell.swift */; };
 		2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72E6371B502821005689B3 /* GiftTableCellView.xib */; };
 		2D8334441B418406007BC016 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8334431B418406007BC016 /* photo.png */; };
+		2D8FF2401BE4F50800B20E9E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FF23F1BE4F50800B20E9E /* Settings.swift */; };
 		2D9DC1D51B50DBB0004D25CE /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1CA1B50DBB0004D25CE /* Accounts.framework */; };
 		2D9DC1D61B50DBB0004D25CE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1CB1B50DBB0004D25CE /* AudioToolbox.framework */; };
 		2D9DC1D71B50DBB0004D25CE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1CC1B50DBB0004D25CE /* CFNetwork.framework */; };
@@ -67,6 +68,7 @@
 		2D72E6351B502708005689B3 /* GiftCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCustomCell.swift; sourceTree = "<group>"; };
 		2D72E6371B502821005689B3 /* GiftTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftTableCellView.xib; sourceTree = "<group>"; };
 		2D8334431B418406007BC016 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		2D8FF23F1BE4F50800B20E9E /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2D9DC1CA1B50DBB0004D25CE /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2D9DC1CB1B50DBB0004D25CE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2D9DC1CC1B50DBB0004D25CE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -150,6 +152,7 @@
 				2D4510031B3334E80085B2CE /* GiftList.xcdatamodeld */,
 				2D450FFF1B3334E80085B2CE /* Supporting Files */,
 				2D45102C1B33607F0085B2CE /* DataContext.swift */,
+				2D8FF23F1BE4F50800B20E9E /* Settings.swift */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				TargetAttributes = {
 					2D450FFB1B3334E80085B2CE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Q7W3YMKU4N;
 					};
 				};
 			};
@@ -277,6 +281,7 @@
 				2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */,
 				2DFC59F21B67150100ED4864 /* BWWalkthroughPageViewController.swift in Sources */,
 				2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */,
+				2D8FF2401BE4F50800B20E9E /* Settings.swift in Sources */,
 				2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */,
 				2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */,
 				2D5589F91B3771A900915E1D /* ImageZoomController.swift in Sources */,
