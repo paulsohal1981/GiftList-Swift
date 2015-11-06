@@ -39,7 +39,6 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         requestProductData()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
        
-
     }
     
     //Tap Events
