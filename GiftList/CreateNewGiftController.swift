@@ -12,6 +12,7 @@ import StoreKit
 
 class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver
 {
+    @IBOutlet weak var cameraImageView: UIImageView!
     var dataContext = DataContext()
     var isFrontPicture : Bool = true
     var userSettings : UserSettings? = nil
@@ -38,6 +39,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         // Set IAPS
         requestProductData()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+        
        
     }
     

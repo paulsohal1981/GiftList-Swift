@@ -23,34 +23,29 @@ class DataContext {
         //Request Entity
         let request = NSFetchRequest(entityName: self.UserSettingsEntity);
         
-        do
+        let results = (try! self.context.executeFetchRequest(request)) as! [UserSettings]
+        
+        if (results.count == 0)
         {
-        //let results = try? self.context.executeFetchRequest(request)
-            let results = (try! self.context.executeFetchRequest(request)) as! [UserSettings]
+            let newSetting = NSEntityDescription.insertNewObjectForEntityForName(self.UserSettingsEntity, inManagedObjectContext: context) as! UserSettings
             
-            if (results.count == 0)
+            newSetting.giftcount = 10;
+            
+            do
             {
-                let newSetting = NSEntityDescription.insertNewObjectForEntityForName(self.UserSettingsEntity, inManagedObjectContext: context) as! UserSettings
-                
-                newSetting.giftcount = 10;
-                
-                do {
-                    try self.context.save()
-                } catch _ {
-                }
-                
-                return newSetting;
+                try self.context.save()
             }
-            else
+            catch
             {
-                
+                print(error)
             }
-            
-            return results[0];
+
+            return newSetting;
         }
-        catch _{
-            
-        }
+        
+        return results[0];
+      
+
       
     }
     
@@ -61,7 +56,8 @@ class DataContext {
         
         do {
             try self.context.save()
-        } catch _ {
+        } catch {
+             print(error)
         }
         
     }
@@ -80,7 +76,8 @@ class DataContext {
             //        newGift.backImage = gift.backImage
         
             try self.context.save()
-        } catch _ {
+        } catch {
+             print(error)
         }
     }
     
@@ -100,7 +97,8 @@ class DataContext {
         
         do {
             try self.context.save()
-        } catch _ {
+        } catch {
+             print(error)
         }
         
     }
@@ -112,7 +110,8 @@ class DataContext {
         self.context.deleteObject(gift)
         do {
             try self.context.save()
-        } catch _ {
+        } catch {
+             print(error)
         }
     }
     
@@ -132,7 +131,8 @@ class DataContext {
      
         do {
             try self.context.save()
-        } catch _ {
+        } catch {
+             print(error)
         }
     }
     

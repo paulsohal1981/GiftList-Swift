@@ -503,6 +503,7 @@
                     </view>
                     <connections>
                         <outlet property="GiftName" destination="Nra-La-nPR" id="OAA-bH-Ae5"/>
+                        <outlet property="cameraImageView" destination="bJb-Xl-QBD" id="0es-Nt-vIL"/>
                         <outlet property="frontImage" destination="bJb-Xl-QBD" id="djM-Ua-0Wf"/>
                     </connections>
                 </viewController>
