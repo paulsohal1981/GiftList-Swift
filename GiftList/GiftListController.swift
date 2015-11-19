@@ -8,8 +8,10 @@
 
 import UIKit
 import CoreData
+import StoreKit
+import SwiftyStoreKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,SKPaymentTransactionObserver {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addGiftButton: UIButton!
@@ -44,6 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //initialize formatter
         dayTimePeriodFormatter.dateFormat = "MMMM d, y"
         
+        //SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+        
         self.loadGifts()
     }
     
@@ -77,6 +81,51 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
+    @IBAction func resetInAppPurchaseClick(sender: AnyObject) {
+        showResetInAppPurchaseAlert()
+    }
+    
+    func showResetInAppPurchaseAlert()
+    {
+        //Create the AlertController
+        let actionSheetController: UIAlertController =  UIAlertController(title: "Restore In-App Purchase", message: "Restore your In-App purchase and unlock the ability to manage unlimited gifts", preferredStyle: .ActionSheet)
+
+        //Continue action
+        let continueAction: UIAlertAction = UIAlertAction(title: "Restore", style: .Default) { action -> Void in
+            actionSheetController.dismissViewControllerAnimated(false, completion: nil)
+            
+            SwiftyStoreKit.restorePurchases() { result in
+                switch result {
+                case .Success(let productId):
+                    print("Restore Success: \(productId)")
+                    self.dataContext.SetUserSettingGiftCount(10000)
+                    self.alert("Congratulations", message: "Your purchas has been restored!")
+                    print("Gift Count Set to 10000")
+                    break
+                case .NothingToRestore:
+                    print("Nothing to Restore")
+                    self.alert("Nothing to Restore", message: "Nothing to Restore")
+
+                    break
+                case .Error(let error):
+                    print("Restore Failed: \(error)")
+                    self.alert("Error", message: "Restore Failed: \(error)")
+    
+                    break
+                }
+            }
+        }
+        
+        //Continue action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            actionSheetController.dismissViewControllerAnimated(false, completion: nil)
+        }
+        
+        actionSheetController.addAction(continueAction)
+        actionSheetController.addAction(cancelAction)
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
     
     //TABLE View Functions
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -141,6 +190,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction])   {
+        
+        for transaction:AnyObject in transactions {
+            if let trans:SKPaymentTransaction = transaction as? SKPaymentTransaction{
+                switch trans.transactionState {
+                case .Restored:
+                
+                    break;
+                case .Failed:
+                    
+                    break;
+                    // case .Restored:
+                    //[self restoreTransaction:transaction];
+                default:
+                    break;
+                }
+            }
+        }
+    }
+    
     //Segue pass gift object
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -158,6 +227,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func addGift(sender: AnyObject)
     {
         performSegueWithIdentifier("addGiftSegue", sender: sender)
+    }
+    
+    func alert(title: String, message: String)
+    {
+        //Create the AlertController
+        let actionSheetController: UIAlertController =  UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        //Continue action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Okay", style: .Cancel) { action -> Void in
+            actionSheetController.dismissViewControllerAnimated(false, completion: nil)
+        }
+        
+        actionSheetController.addAction(cancelAction)
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+
     }
     
 

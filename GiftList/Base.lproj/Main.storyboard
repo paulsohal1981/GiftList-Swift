@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LBy-bQ-M3Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LBy-bQ-M3Q">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -10,7 +10,7 @@
         <scene sceneID="Pet-IH-Xto">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mxI-Gg-8Cn" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eRg-a9-nv6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -166,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Page 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-K0-x6a">
-                                <rect key="frame" x="186" y="357" width="54" height="20.5"/>
+                                <rect key="frame" x="186" y="357" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -297,7 +297,7 @@
                                         <rect key="frame" x="0.0" y="22" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oRK-Aa-Cff" id="C0x-ZR-n2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -343,6 +343,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Gifts" id="wsg-Ok-860">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="fLy-VS-AJM">
+                            <connections>
+                                <action selector="resetInAppPurchaseClick:" destination="BYZ-38-t0r" id="o85-DA-pRs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JRa-6d-cLX">
                             <connections>
                                 <segue destination="rUs-JI-5jr" kind="presentation" identifier="addGiftSegue" id="qN1-sK-Ra1"/>
@@ -381,16 +386,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aunt Kathy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-La-nPR">
-                                <rect key="frame" x="26" y="106" width="362" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aunt Kathy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-La-nPR">
+                                <rect key="frame" x="30" y="120" width="354" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="aJO-AW-8qj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Take a picture of it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09m-72-FT1">
-                                <rect key="frame" x="10" y="156" width="394" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture of it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09m-72-FT1">
+                                <rect key="frame" x="10" y="170" width="394" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="arl-B9-VDP"/>
                                 </constraints>
@@ -398,7 +403,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Click on the image to open the camera)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-ad-MH3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Click on the image to open the camera)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-ad-MH3">
                                 <rect key="frame" x="10" y="0.0" width="394" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="usE-Hm-Gjk"/>
@@ -428,8 +433,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bJb-Xl-QBD">
-                                <rect key="frame" x="10" y="185" width="394" height="405"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bJb-Xl-QBD">
+                                <rect key="frame" x="10" y="199" width="394" height="527"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="DCQ-fr-rIN"/>
                                     <constraint firstAttribute="height" constant="400" id="MH2-1W-vTJ"/>
@@ -475,6 +480,7 @@
                             <constraint firstItem="Q2s-CE-uZv" firstAttribute="leading" secondItem="CFf-iC-8op" secondAttribute="leading" constant="10" id="lL5-JM-4k1"/>
                             <constraint firstItem="09m-72-FT1" firstAttribute="leading" secondItem="CFf-iC-8op" secondAttribute="leading" constant="10" id="mQp-12-lr8"/>
                             <constraint firstAttribute="trailing" secondItem="bJb-Xl-QBD" secondAttribute="trailing" constant="40" id="ooD-ho-mt4"/>
+                            <constraint firstItem="Svv-ad-MH3" firstAttribute="top" secondItem="yOX-i9-zXm" secondAttribute="top" id="ptu-rp-9yB"/>
                             <constraint firstItem="Q2s-CE-uZv" firstAttribute="top" secondItem="yOX-i9-zXm" secondAttribute="bottom" constant="6" id="pzc-rE-p9G"/>
                             <constraint firstAttribute="trailing" secondItem="bJb-Xl-QBD" secondAttribute="trailing" constant="357" id="qmZ-Ts-mSG"/>
                             <constraint firstItem="bJb-Xl-QBD" firstAttribute="leading" secondItem="CFf-iC-8op" secondAttribute="leading" constant="10" id="sj9-Rq-KWT"/>
@@ -538,7 +544,7 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 2nd, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-fU-AXg">
-                                <rect key="frame" x="10" y="132" width="394" height="20.5"/>
+                                <rect key="frame" x="10" y="132" width="394" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="5TT-ys-mx2"/>
                                 </constraints>
@@ -657,6 +663,7 @@
         <image name="GiftList.jpg" width="750" height="1334"/>
         <image name="Intro Ruby.jpg" width="750" height="1334"/>
         <image name="ReveiveGift.jpg" width="2326" height="2832"/>
+        <image name="hamburger" width="20" height="20"/>
         <image name="photo.png" width="470" height="470"/>
     </resources>
 </document>

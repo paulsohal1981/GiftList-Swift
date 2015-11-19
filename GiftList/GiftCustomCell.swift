@@ -38,17 +38,18 @@ class GiftCustomCell : UITableViewCell {
         //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
         if let myImage = self.giftImage.image
         {
-            let objectsToShare = [textToShare, myImage]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
-            //New Excluded Activities Code
-            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList,UIActivityTypeAssignToContact]
             
-            activityVC.completionWithItemsHandler = doneSharingHandler;
+                let objectsToShare = [textToShare, myImage]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
-            delegate?.presentViewController(activityVC, animated: true, completion: nil)
+                //New Excluded Activities Code
+                activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList,UIActivityTypeAssignToContact]
             
-
+                activityVC.completionWithItemsHandler = self.doneSharingHandler;
+            
+                self.delegate?.presentViewController(activityVC, animated: true, completion: nil)
+        
         }
     }
     

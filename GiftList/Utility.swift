@@ -28,4 +28,29 @@ class Utility {
         return decodedString as! String
     }
     
+    func maskImage(image: UIImage, withMask maskImage: UIImage) -> UIImage {
+        
+        let maskRef = maskImage.CGImage
+        
+        let mask = CGImageMaskCreate(
+            CGImageGetWidth(maskRef),
+            CGImageGetHeight(maskRef),
+            CGImageGetBitsPerComponent(maskRef),
+            CGImageGetBitsPerPixel(maskRef),
+            CGImageGetBytesPerRow(maskRef),
+            CGImageGetDataProvider(maskRef),
+            nil,
+            false)
+        
+        let masked = CGImageCreateWithMask(image.CGImage, mask)
+        let maskedImage = UIImage(CGImage: masked!)
+        
+        // No need to release. Core Foundation objects are automatically memory managed.
+        
+        return maskedImage
+        
+    }
+    
+
+    
 }

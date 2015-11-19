@@ -39,7 +39,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         // Set IAPS
         requestProductData()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
-        
+
        
     }
     
@@ -107,7 +107,10 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
     @IBAction func SaveNewGift(sender: AnyObject) {
         
         let gifts = dataContext.GetAllGifts();
-        if(gifts.count > Int(self.userSettings!.giftcount))
+        var userGiftCount = Int(self.userSettings!.giftcount)
+        userGiftCount = 10
+        
+        if(gifts.count > userGiftCount)
         {
             buyUnlimitedGift()
         }
@@ -180,17 +183,33 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
        
         for transaction:AnyObject in transactions {
             if let trans:SKPaymentTransaction = transaction as? SKPaymentTransaction{
+                print(trans.transactionState.rawValue)
+                
                 switch trans.transactionState {
                 case .Purchased:
+                        print("Purchased")
                         dataContext.SetUserSettingGiftCount(10000)
+                        print("Gift Count Set to 10000")
+                    break;
+                case .Restored:
+                        print("Restored")
+                        dataContext.SetUserSettingGiftCount(10000)
+                        print("Gift Count Set to 10000")
                     break;
                 case .Failed:
-
-                    break;
-                    // case .Restored:
+                        print("Failed")
+                        break;
+                case .Deferred:
+                            print("Deferred")
+                        break;
+                case .Purchasing:
+                    print("Purchasing")
+                    dataContext.SetUserSettingGiftCount(10000)
+                    print("Gift Count Set to 10000")
+                    break
                     //[self restoreTransaction:transaction];
                 default:
-                    break;
+                    break
                 }
             }
         }

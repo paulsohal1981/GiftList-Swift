@@ -21,6 +21,7 @@
 		2D45102D1B33607F0085B2CE /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102C1B33607F0085B2CE /* DataContext.swift */; };
 		2D45102F1B33653E0085B2CE /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102E1B33653E0085B2CE /* Gift.swift */; };
 		2D6404551B687C7A0051A778 /* GiftListIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6404541B687C7A0051A778 /* GiftListIntroController.swift */; };
+		2D6F5F5A1BFD74C000EE569D /* 1447924116_menu-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F5F591BFD74C000EE569D /* 1447924116_menu-alt.png */; };
 		2D72E6361B502708005689B3 /* GiftCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E6351B502708005689B3 /* GiftCustomCell.swift */; };
 		2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72E6371B502821005689B3 /* GiftTableCellView.xib */; };
 		2D8334441B418406007BC016 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8334431B418406007BC016 /* photo.png */; };
@@ -67,6 +68,7 @@
 		2D45102C1B33607F0085B2CE /* DataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
 		2D45102E1B33653E0085B2CE /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		2D6404541B687C7A0051A778 /* GiftListIntroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListIntroController.swift; sourceTree = "<group>"; };
+		2D6F5F591BFD74C000EE569D /* 1447924116_menu-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1447924116_menu-alt.png"; path = "../../../Downloads/1447924116_menu-alt.png"; sourceTree = "<group>"; };
 		2D72E6351B502708005689B3 /* GiftCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCustomCell.swift; sourceTree = "<group>"; };
 		2D72E6371B502821005689B3 /* GiftTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftTableCellView.xib; sourceTree = "<group>"; };
 		2D8334431B418406007BC016 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		2D450FFF1B3334E80085B2CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D6F5F591BFD74C000EE569D /* 1447924116_menu-alt.png */,
 				2D4510001B3334E80085B2CE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -286,6 +289,7 @@
 				2D119C371B69D1A1002F55E3 /* Intro Ruby.jpg in Resources */,
 				2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */,
 				2D45100F1B3334E80085B2CE /* LaunchScreen.xib in Resources */,
+				2D6F5F5A1BFD74C000EE569D /* 1447924116_menu-alt.png in Resources */,
 				2D45100C1B3334E80085B2CE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
