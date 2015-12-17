@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import StoreKit
 
+
 class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver
 {
     @IBOutlet weak var cameraImageView: UIImageView!
@@ -23,6 +24,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
     
     @IBOutlet weak var frontImage: UIImageView!
     @IBOutlet weak var GiftName: UITextField!
+    @IBOutlet weak var testView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,6 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
         requestProductData()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
 
-       
     }
     
     //Tap Events

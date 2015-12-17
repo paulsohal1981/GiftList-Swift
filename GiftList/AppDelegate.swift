@@ -8,7 +8,8 @@
 
 import UIKit
 import CoreData
-
+import ABReviewReminder
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +20,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // list of options to override the default behavior
+        let options:[ABReviewReminderOptions : AnyObject] =
+        [
+            ABReviewReminderOptions.Delegate: self,
+            ABReviewReminderOptions.DaysUntilPrompt: 5,
+            ABReviewReminderOptions.UsesUntilPrompt: 0,
+            ABReviewReminderOptions.TimeBeforeReminding: 2
+        ]
+        
+        // list of string to provide costum strings for the alert
+        let strings:[ABAlertStrings : String] =
+        [
+            ABAlertStrings.AlertTitle: "Think others can use this app",
+            ABAlertStrings.AlertMessage: "Please give us rating on the app store.",
+            ABAlertStrings.AlertDeclineTitle: "No thanks",
+            ABAlertStrings.AlertRateTitle: "I'd love to",
+            ABAlertStrings.AlertRateLaterTitle: "Later"
+        ]
+        
+        
+        ABReviewReminder.startSession("1020938227", withOptions: options, strings: strings) //1
+        ABReviewReminder.appLaunched() //2
+        
         //Sleep so we display the lauch screen for longer.
         sleep(3)
+
         
         return true
     }
@@ -37,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidFinishLaunching(application: UIApplication) {
         
-//        Parse.setApplicationId("VM79wzdmd2SWVxC2AKK1YUyIHClhw1JUjeZZokhM", clientKey: "BXITxYXJw46jgVIZEIDdFEdcQdjvqlCZ7T0prInk")
+        Parse.setApplicationId("VM79wzdmd2SWVxC2AKK1YUyIHClhw1JUjeZZokhM", clientKey: "BXITxYXJw46jgVIZEIDdFEdcQdjvqlCZ7T0prInk")
         
         //Track Analytics
 //        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(<#launchOptions: [NSObject : AnyObject]?#>, block: <#PFBooleanResultBlock?##(Bool, NSError?) -> Void#>)

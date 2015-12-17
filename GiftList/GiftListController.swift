@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addGiftButton: UIButton!
     
-    
     var events = []
     var gifts : [Gift] = []
     var selectedGift : Gift? = nil

@@ -10,3 +10,7 @@ end
 
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'SwiftyStoreKit'
+pod 'ABReviewReminder'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+pod 'Parse'

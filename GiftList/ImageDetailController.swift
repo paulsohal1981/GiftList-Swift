@@ -82,14 +82,7 @@ class ImageDetailController: UIViewController {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        //Initiate Segue
-        let imageZoomController = segue.destinationViewController as! ImageZoomController
-        
-        imageZoomController.image = self.detailImage.image
-        
-    }
+
     func doneSharingHandler(activityType: String?, completed: Bool, returnedItems: [AnyObject]?, error: NSError?) {
         // Return if cancelled
         if (!completed) {

