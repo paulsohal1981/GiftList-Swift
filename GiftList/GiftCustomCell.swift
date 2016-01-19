@@ -60,6 +60,7 @@ class GiftCustomCell : UITableViewCell {
         }
         else
         {
+            ParseAnalytics.Thanked("", type: activityType!)
             CompleteThanks()
         }
     }

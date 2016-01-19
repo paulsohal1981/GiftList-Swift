@@ -90,6 +90,8 @@ class ImageDetailController: UIViewController {
         }
         else
         {
+            ParseAnalytics.Thanked("", type: activityType!)
+
             CompleteThanks()
         }
         

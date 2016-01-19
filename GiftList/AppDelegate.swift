@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ABReviewReminder.startSession("1020938227", withOptions: options, strings: strings) //1
         ABReviewReminder.appLaunched() //2
         
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+       
+        
         //Sleep so we display the lauch screen for longer.
         sleep(3)
 
@@ -63,9 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidFinishLaunching(application: UIApplication) {
         
         Parse.setApplicationId("VM79wzdmd2SWVxC2AKK1YUyIHClhw1JUjeZZokhM", clientKey: "BXITxYXJw46jgVIZEIDdFEdcQdjvqlCZ7T0prInk")
-        
-        //Track Analytics
-//        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(<#launchOptions: [NSObject : AnyObject]?#>, block: <#PFBooleanResultBlock?##(Bool, NSError?) -> Void#>)
 
     }
 

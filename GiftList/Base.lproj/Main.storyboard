@@ -343,7 +343,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Gifts" id="wsg-Ok-860">
-                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="fLy-VS-AJM">
+                        <barButtonItem key="leftBarButtonItem" image="restore" style="plain" id="fLy-VS-AJM">
                             <connections>
                                 <action selector="resetInAppPurchaseClick:" destination="BYZ-38-t0r" id="o85-DA-pRs"/>
                             </connections>
@@ -597,10 +597,10 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="el2-uX-dif"/>
-                                        <exclude reference="hwK-1u-EhI"/>
                                         <exclude reference="0HL-gK-7nv"/>
                                         <exclude reference="qHz-C0-Puw"/>
+                                        <exclude reference="el2-uX-dif"/>
+                                        <exclude reference="hwK-1u-EhI"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -634,7 +634,7 @@
         <image name="GiftList.jpg" width="750" height="1334"/>
         <image name="Intro Ruby.jpg" width="750" height="1334"/>
         <image name="ReveiveGift.jpg" width="2326" height="2832"/>
-        <image name="hamburger" width="20" height="20"/>
         <image name="photo.png" width="470" height="470"/>
+        <image name="restore" width="24" height="24"/>
     </resources>
 </document>

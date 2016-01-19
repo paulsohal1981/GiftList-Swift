@@ -51,6 +51,9 @@ class Utility {
         
     }
     
-
+    func PageVisited(pageName:String)
+    {
+        
+    }
     
 }

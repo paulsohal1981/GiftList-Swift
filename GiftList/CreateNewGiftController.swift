@@ -121,6 +121,8 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
             let backUIImage = UIImageJPEGRepresentation(self.frontImage.image!, 1)
         
             self.dataContext.InsertGiftWithFrontandBackImage(self.GiftName.text!, frontImage: frontUIImage! , backImage: backUIImage!)
+            
+            ParseAnalytics.GiftAdded(self.GiftName.text!)
         
             self.dismissViewControllerAnimated(true, completion: nil)
         }
@@ -160,6 +162,8 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
     func buyUnlimitedGift() {
         let payment = SKPayment(product: product!)
         SKPaymentQueue.defaultQueue().addPayment(payment)
+        
+        ParseAnalytics.PurchaseShown()
     }
     
     //Request for product is recieved and products are set in the controller.
@@ -190,11 +194,13 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
                 case .Purchased:
                         print("Purchased")
                         dataContext.SetUserSettingGiftCount(10000)
+                        ParseAnalytics.PurchaseComplete()
                         print("Gift Count Set to 10000")
                     break;
                 case .Restored:
                         print("Restored")
                         dataContext.SetUserSettingGiftCount(10000)
+                        ParseAnalytics.PurchaseComplete()
                         print("Gift Count Set to 10000")
                     break;
                 case .Failed:
@@ -206,6 +212,7 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
                 case .Purchasing:
                     print("Purchasing")
                     dataContext.SetUserSettingGiftCount(10000)
+                    ParseAnalytics.PurchaseComplete()
                     print("Gift Count Set to 10000")
                     break
                     //[self restoreTransaction:transaction];

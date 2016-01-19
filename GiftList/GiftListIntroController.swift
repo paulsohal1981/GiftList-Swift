@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDelegate
 {
     var dataContext = DataContext()
@@ -64,7 +65,8 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
     
     func walkthroughCloseButtonPressed()
     {
-         //parseAnalyticUtility.TourEnded();
+        
+         ParseAnalytics.TourCompleted()
          introHasShow = true
          self.dismissViewControllerAnimated(true, completion: nil)
     }
