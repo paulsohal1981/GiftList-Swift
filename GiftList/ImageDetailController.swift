@@ -43,6 +43,16 @@ class ImageDetailController: UIViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        var tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "Gift Detail")
+        
+        var builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+        
+    }
+    
     @IBAction func deleteGift(sender: AnyObject) {
         //Delete the image
         self.dataContext.DeleteGift(gift!)

@@ -22,6 +22,7 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
     
     override func viewDidAppear(animated: Bool) {
         
+        
         if(introHasShow == false)
         {
             let gifts = self.dataContext.GetAllGifts()
@@ -33,6 +34,12 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
             }
             else
             {
+                var tracker = GAI.sharedInstance().defaultTracker
+                tracker.set(kGAIScreenName, value: "Onboarding")
+                
+                var builder = GAIDictionaryBuilder.createScreenView()
+                tracker.send(builder.build() as [NSObject : AnyObject])
+                
                 //performSegueWithIdentifier("GiftListSegue", sender: self)
                 StartWalkThrough()
             }

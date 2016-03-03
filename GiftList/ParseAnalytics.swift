@@ -5,7 +5,6 @@
 //  Created by paul sohal on 1/18/16.
 //  Copyright © 2016 Acceler Inc. All rights reserved.
 //
-import Parse
 
 class ParseAnalytics {
     
@@ -19,8 +18,7 @@ class ParseAnalytics {
         ]
         
         // Send the dimensions to Parse along with the 'search' event
-        PFAnalytics.trackEvent("compmleted", dimensions:dimensions)
-    }
+            }
     
     
     //Gift Added - KPI
@@ -32,7 +30,7 @@ class ParseAnalytics {
         ]
         
         // Send the dimensions to Parse along with the 'search' event
-        PFAnalytics.trackEvent("giftAdded", dimensions:dimensions)
+        
     }
     
     //Purchase Shown
@@ -43,8 +41,7 @@ class ParseAnalytics {
             "Shown": "1",
         ]
         
-        // Send the dimensions to Parse along with the 'search' event
-        PFAnalytics.trackEvent("purchaseShown", dimensions:dimensions)
+        
     }
     
     
@@ -57,7 +54,7 @@ class ParseAnalytics {
         ]
         
         // Send the dimensions to Parse along with the 'search' event
-        PFAnalytics.trackEvent("purchaseComplete", dimensions:dimensions)
+        
     }
     
     //Thanked
@@ -70,7 +67,7 @@ class ParseAnalytics {
         ]
         
         // Send the dimensions to Parse along with the 'search' event
-        PFAnalytics.trackEvent("thanked", dimensions:dimensions)
+        
     }
     
     

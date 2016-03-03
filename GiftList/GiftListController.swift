@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //SKPaymentQueue.defaultQueue().addTransactionObserver(self)
         
+        
         self.loadGifts()
     }
     
@@ -57,6 +58,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //rebind data list
         self.tableView.reloadData()
+        
+        var tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "Gift List")
+        
+        var builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
         
     }
     

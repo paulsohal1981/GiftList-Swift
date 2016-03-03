@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import ABReviewReminder
-import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,9 +42,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ABReviewReminder.startSession("1020938227", withOptions: options, strings: strings) //1
         ABReviewReminder.appLaunched() //2
         
-        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-       
+        // Configure tracker from GoogleService-Info.plist.
+        var configureError:NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
         
+        // Optional: configure GAI options.
+        var gai = GAI.sharedInstance()
+        gai.trackUncaughtExceptions = true  // report uncaught exceptions
+        gai.logger.logLevel = GAILogLevel.Verbose  // remove before app release
+
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.allowIDFACollection = true
+
         //Sleep so we display the lauch screen for longer.
         sleep(3)
 
@@ -65,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidFinishLaunching(application: UIApplication) {
         
-        Parse.setApplicationId("VM79wzdmd2SWVxC2AKK1YUyIHClhw1JUjeZZokhM", clientKey: "BXITxYXJw46jgVIZEIDdFEdcQdjvqlCZ7T0prInk")
+
 
     }
 
@@ -114,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
-            dict[NSUnderlyingErrorKey] = error as NSError
+            dict[NSUnderlyingErrorKey] = error as! NSError
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

@@ -44,6 +44,16 @@ class CreateNewGiftController: UIViewController, UIImagePickerControllerDelegate
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "Create New Gift")
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+        
+    }
+    
     //Tap Events
     func frontTapped()
     {
