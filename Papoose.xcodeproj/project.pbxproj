@@ -22,7 +22,6 @@
 		2D45100F1B3334E80085B2CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D45100D1B3334E80085B2CE /* LaunchScreen.xib */; };
 		2D45102D1B33607F0085B2CE /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102C1B33607F0085B2CE /* DataContext.swift */; };
 		2D45102F1B33653E0085B2CE /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45102E1B33653E0085B2CE /* Gift.swift */; };
-		2D4B223F1C4DC99C00E3D1FF /* ParseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B223E1C4DC99C00E3D1FF /* ParseAnalytics.swift */; };
 		2D6404551B687C7A0051A778 /* GiftListIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6404541B687C7A0051A778 /* GiftListIntroController.swift */; };
 		2D72E6361B502708005689B3 /* GiftCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E6351B502708005689B3 /* GiftCustomCell.swift */; };
 		2D72E6381B502821005689B3 /* GiftTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72E6371B502821005689B3 /* GiftTableCellView.xib */; };
@@ -71,7 +70,6 @@
 		2D45100E1B3334E80085B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2D45102C1B33607F0085B2CE /* DataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
 		2D45102E1B33653E0085B2CE /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
-		2D4B223E1C4DC99C00E3D1FF /* ParseAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAnalytics.swift; sourceTree = "<group>"; };
 		2D6404541B687C7A0051A778 /* GiftListIntroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListIntroController.swift; sourceTree = "<group>"; };
 		2D72E6351B502708005689B3 /* GiftCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCustomCell.swift; sourceTree = "<group>"; };
 		2D72E6371B502821005689B3 /* GiftTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftTableCellView.xib; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				2D8FF23F1BE4F50800B20E9E /* Settings.swift */,
 				2DC5BE501BEE3FBF0007650B /* ClientAPI.swift */,
 				2DC5BE541BEE44640007650B /* Utility.swift */,
-				2D4B223E1C4DC99C00E3D1FF /* ParseAnalytics.swift */,
 			);
 			path = GiftList;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 				2DFC59F31B67150100ED4864 /* BWWalkthroughViewController.swift in Sources */,
 				2DC5BE531BEE40590007650B /* UserSettings.swift in Sources */,
 				2D4510021B3334E80085B2CE /* AppDelegate.swift in Sources */,
-				2D4B223F1C4DC99C00E3D1FF /* ParseAnalytics.swift in Sources */,
 				2D4510051B3334E80085B2CE /* GiftList.xcdatamodeld in Sources */,
 				2DC5BE551BEE44640007650B /* Utility.swift in Sources */,
 			);
