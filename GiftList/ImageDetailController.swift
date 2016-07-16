@@ -45,10 +45,10 @@ class ImageDetailController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        var tracker = GAI.sharedInstance().defaultTracker
+        let tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenName, value: "Gift Detail")
         
-        var builder = GAIDictionaryBuilder.createScreenView()
+        let builder = GAIDictionaryBuilder.createScreenView()
         tracker.send(builder.build() as [NSObject : AnyObject])
         
     }
@@ -100,19 +100,25 @@ class ImageDetailController: UIViewController {
         }
         else
         {
-            ParseAnalytics.Thanked("", type: activityType!)
-
-            CompleteThanks()
+            CompleteThanks(activityType)
         }
         
     }
     
-    func CompleteThanks()
+    func CompleteThanks(activityType: String?)
     {
         
         gift?.thanked = "1"
         gift?.thankedDate = NSDate()
         dataContext.SetThanked(gift!)
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        let builder: NSObject = GAIDictionaryBuilder.createEventWithCategory(
+            "ThankedCategory",
+            action: "Thanked",
+            label: activityType,
+            value: nil).build()
+        tracker.send(builder as! [NSObject : AnyObject])
     }
     
 }

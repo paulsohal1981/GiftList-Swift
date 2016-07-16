@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LBy-bQ-M3Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LBy-bQ-M3Q">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -297,7 +297,7 @@
                                         <rect key="frame" x="0.0" y="22" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oRK-Aa-Cff" id="C0x-ZR-n2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -343,11 +343,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Gifts" id="wsg-Ok-860">
-                        <barButtonItem key="leftBarButtonItem" image="restore" style="plain" id="fLy-VS-AJM">
-                            <connections>
-                                <action selector="resetInAppPurchaseClick:" destination="BYZ-38-t0r" id="o85-DA-pRs"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JRa-6d-cLX">
                             <connections>
                                 <segue destination="rUs-JI-5jr" kind="presentation" identifier="addGiftSegue" id="qN1-sK-Ra1"/>
@@ -554,7 +549,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Paul Sohal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-Qo-LmQ">
-                                        <rect key="frame" x="147" y="0.0" width="120.5" height="35"/>
+                                        <rect key="frame" x="147" y="0.0" width="121" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="X2T-Wo-1Iq"/>
                                         </constraints>
@@ -569,7 +564,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 2nd, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-fU-AXg">
-                                        <rect key="frame" x="151.5" y="33.5" width="111" height="20.5"/>
+                                        <rect key="frame" x="152" y="34" width="111" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="162" id="5TT-ys-mx2"/>
                                         </constraints>
@@ -635,6 +630,5 @@
         <image name="Intro Ruby.jpg" width="750" height="1334"/>
         <image name="ReveiveGift.jpg" width="2326" height="2832"/>
         <image name="photo.png" width="470" height="470"/>
-        <image name="restore" width="24" height="24"/>
     </resources>
 </document>

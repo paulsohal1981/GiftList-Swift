@@ -11,7 +11,7 @@ import CoreData
 import StoreKit
 import SwiftyStoreKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,SKPaymentTransactionObserver {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addGiftButton: UIButton!
@@ -59,10 +59,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //rebind data list
         self.tableView.reloadData()
         
-        var tracker = GAI.sharedInstance().defaultTracker
+        let tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenName, value: "Gift List")
         
-        var builder = GAIDictionaryBuilder.createScreenView()
+        let builder = GAIDictionaryBuilder.createScreenView()
         tracker.send(builder.build() as [NSObject : AnyObject])
         
     }

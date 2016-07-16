@@ -35,7 +35,7 @@ class GiftCustomCell : UITableViewCell {
     {
         let textToShare = "Thank you for the gift, \(gift!.name)!"
         
-        //if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
+    
         if let myImage = self.giftImage.image
         {
             
@@ -60,12 +60,11 @@ class GiftCustomCell : UITableViewCell {
         }
         else
         {
-            ParseAnalytics.Thanked("", type: activityType!)
-            CompleteThanks()
+            CompleteThanks(activityType)
         }
     }
     
-    func CompleteThanks()
+    func CompleteThanks(activityType: String?)
     {
         
         
@@ -79,6 +78,12 @@ class GiftCustomCell : UITableViewCell {
         thankedOnLabel.hidden = false
         thankedOnLabel!.text = "Thanked on " + dayTimePeriodFormatter.stringFromDate(gift!.thankedDate)
         
-        dataContext.SetThanked(gift!)
+        let tracker = GAI.sharedInstance().defaultTracker
+        let builder: NSObject = GAIDictionaryBuilder.createEventWithCategory(
+            "ThankedEvent",
+            action: "Thanked",
+            label: activityType,
+            value: nil).build()
+        tracker.send(builder as! [NSObject : AnyObject])
     }
 }

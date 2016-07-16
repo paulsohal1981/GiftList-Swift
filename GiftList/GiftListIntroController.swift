@@ -34,10 +34,10 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
             }
             else
             {
-                var tracker = GAI.sharedInstance().defaultTracker
+                let tracker = GAI.sharedInstance().defaultTracker
                 tracker.set(kGAIScreenName, value: "Onboarding")
                 
-                var builder = GAIDictionaryBuilder.createScreenView()
+                let builder = GAIDictionaryBuilder.createScreenView()
                 tracker.send(builder.build() as [NSObject : AnyObject])
                 
                 //performSegueWithIdentifier("GiftListSegue", sender: self)
@@ -72,8 +72,6 @@ class GiftListIntroController : UIViewController, BWWalkthroughViewControllerDel
     
     func walkthroughCloseButtonPressed()
     {
-        
-         ParseAnalytics.TourCompleted()
          introHasShow = true
          self.dismissViewControllerAnimated(true, completion: nil)
     }
